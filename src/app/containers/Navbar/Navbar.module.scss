@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+
+.container {
+  background: rgba(33, 39, 54, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.languagesContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.language {
+  text-decoration: none;
+  color: $primary_color_light;
+  padding: 1rem;
+}

@@ -1,6 +1,11 @@
 import { useTranslations } from "next-intl";
+import Navbar from "../containers/Navbar";
 
 export default function Home() {
   const t = useTranslations("bannerSection");
-  return <h1>{t("title")}</h1>;
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 }
