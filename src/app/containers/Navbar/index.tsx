@@ -1,3 +1,4 @@
+import cs from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -12,9 +13,10 @@ import styles from "./Navbar.module.scss";
 
 const Navbar: React.FC = () => {
   const navbarT = useTranslations("NAVBAR");
+  const navbarStyles = cs(styles.container, styles.fixedNavbar);
 
   return (
-    <Container className={styles.container}>
+    <Container className={navbarStyles}>
       <div className={styles.languagesContainer}>
         {Object.entries(LANGUAGES).map(([key, lang]) => (
           <Link className={styles.language} href={`/${lang}`} key={key}>
