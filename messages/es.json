@@ -1,5 +1,9 @@
 {
-  "bannerSection": {
-    "title": "Hola mundo!"
+  "NAVBAR": {
+    "HOME": "home",
+    "PICAFLOR": "el picaflor polo club",
+    "PATAGONIA": "patagonia polo",
+    "BREEDING": "cría y caballos",
+    "CONTACT": "contacto"
   }
 }

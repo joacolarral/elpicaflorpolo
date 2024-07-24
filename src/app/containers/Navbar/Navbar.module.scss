@@ -21,3 +21,41 @@
   color: $primary_color_light;
   padding: 1rem;
 }
+
+.contentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logosContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbarItemsContainer {
+  display: flex;
+}
+
+.navItem {
+  position: relative;
+  padding: 0 1.5rem;
+  text-decoration: none;
+  color: $primary_color_light; // Ajusta el color según tu diseño
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 1rem; // Ajusta la altura según tu diseño
+    background-color: $primary_color_light; // Ajusta el color según tu diseño
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}

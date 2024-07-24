@@ -1,27 +1,45 @@
-import React from "react";
-import Container from "../../components/Container";
-import PicaflorLogo from "../../images/logos/el_picaflor.svg";
-import PatagoniaPoloLogo from "../../images/logos/patagonia_polo.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { LANGUAGE } from "@/app/utils/constants/text";
+import { useTranslations } from "next-intl";
+import React from "react";
+
+import Container from "@/app/components/Container";
+import PicaflorLogo from "@/app/images/logos/el_picaflor.svg";
+import PatagoniaPoloLogo from "@/app/images/logos/patagonia_polo.svg";
+
+import { LANGUAGES, NAVBAR_ITEMS } from "./constants";
 import styles from "./Navbar.module.scss";
 
 const Navbar: React.FC = () => {
+  const navbarT = useTranslations("NAVBAR");
+
   return (
     <Container className={styles.container}>
       <div className={styles.languagesContainer}>
-        {Object.entries(LANGUAGE).map(([key, lang]) => (
+        {Object.entries(LANGUAGES).map(([key, lang]) => (
           <Link className={styles.language} href={`/${lang}`} key={key}>
             {lang.toLocaleUpperCase()}
           </Link>
         ))}
       </div>
-      <div>
-        <Image width={85} src={PicaflorLogo} alt="PicaflorLogo" />
-        <Image width={108} src={PatagoniaPoloLogo} alt="PatagoniaPoloLogo" />
+      <div className={styles.contentContainer}>
+        <div className={styles.logosContainer}>
+          <Image width={100} src={PicaflorLogo} alt="PicaflorLogo" />
+          <Image width={128} src={PatagoniaPoloLogo} alt="PatagoniaPoloLogo" />
+        </div>
+        <div className={styles.navbarItemsContainer}>
+          {Object.entries(NAVBAR_ITEMS).map(([key, text], index, array) => (
+            <Link
+              className={styles.navItem}
+              href={`#${key.toLocaleLowerCase()}`}
+              key={key}
+              data-last={index === array.length - 1}
+            >
+              {navbarT(text).toLocaleUpperCase()}
+            </Link>
+          ))}
+        </div>
       </div>
-      <div></div>
     </Container>
   );
 };
