@@ -1,0 +1,36 @@
+@import "../../styles/variables.scss";
+
+.button {
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 24px;
+  padding: 0.5rem 0;
+  width: 13.8rem;
+  background-color: transparent;
+  border: 2px solid;
+  cursor: pointer;
+}
+
+.primaryButton {
+  color: $primary_color_light;
+  border-color: $primary_color_light;
+  &:hover {
+    background-color: rgba(214, 219, 228, 0.5);
+  }
+}
+
+.secondaryButton {
+  color: $secondary_color_light;
+  border-color: $secondary_color_light;
+  background-color: $background_secondary_color;
+  font-weight: 700;
+  &:hover {
+    background-color: rgba(214, 219, 228, 0.5);
+  }
+}
+
+.disabled {
+  color: rgba(166, 168, 171, 1);
+  border: 1px solid rgba(166, 168, 171, 1);
+  font-weight: 400;
+}

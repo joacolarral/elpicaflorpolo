@@ -5,5 +5,12 @@
     "PATAGONIA": "patagonia polo",
     "BREEDING": "cría y caballos",
     "CONTACT": "contacto"
+  },
+  "HOME": {
+    "CALENDAR_SECTION": {
+      "TITLE": "UN CAMINO PARA RECORRER",
+      "SUBTITLE": "Experimentá el Polo durante todo el año en Buenos Aires y en la Patagonia",
+      "BUTTON": "Descubrila"
+    }
   }
 }

@@ -10,3 +10,11 @@ export const NAVBAR_ITEMS = {
   BREEDING: "BREEDING",
   CONTACT: "CONTACT",
 };
+
+// HOME
+
+export const SEASON = {
+  AUTUMN: "autumn",
+  SPRING: "spring",
+  SUMMER: "summer",
+};

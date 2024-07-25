@@ -8,7 +8,8 @@ import Container from "@/app/components/Container";
 import PicaflorLogo from "@/app/images/logos/el_picaflor.svg";
 import PatagoniaPoloLogo from "@/app/images/logos/patagonia_polo.svg";
 
-import { LANGUAGES, NAVBAR_ITEMS } from "./constants";
+import { LANGUAGES, NAVBAR_ITEMS } from "../../constants";
+
 import styles from "./Navbar.module.scss";
 
 const Navbar: React.FC = () => {

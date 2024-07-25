@@ -5,5 +5,12 @@
     "PATAGONIA": "patagonia polo",
     "BREEDING": "breeding and horses",
     "CONTACT": "contact"
+  },
+  "HOME": {
+    "CALENDAR_SECTION": {
+      "TITLE": "A JOURNEY TO EXPLORE",
+      "SUBTITLE": "Experience polo year-round in Buenos Aires and Patagonia",
+      "BUTTON": "Discover"
+    }
   }
 }

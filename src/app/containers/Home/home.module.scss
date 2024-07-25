@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss";
+
+// CALENDAR HOME STYLES
+.calendarHomeContainer {
+  display: flex;
+  gap: 6rem;
+}
+
+.calendarContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.calendarCardsContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.calendarCard {
+  transition: transform 0.4s ease;
+  position: relative;
+  &:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+
+  button {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    &:hover {
+      background-color: white;
+    }
+  }
+}
