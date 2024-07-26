@@ -11,6 +11,10 @@
       "TITLE": "A JOURNEY TO EXPLORE",
       "SUBTITLE": "Experience polo year-round in Buenos Aires and Patagonia",
       "BUTTON": "Discover"
+    },
+    "CAROUSEL_HOME": {
+      "TITLE": "LA EXPERIENCIA",
+      "SUBTITLE": "El polo es más que el partido, es una experiencia que combina deporte, naturaleza y encuentro."
     }
   }
 }
