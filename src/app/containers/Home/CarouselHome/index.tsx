@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 import Carousel from "@/app/components/Carousel";
@@ -12,7 +13,6 @@ import ImgCarousel_6 from "@/app/images/home/carousel/Home_carrusel6_Experiencia
 import ImgCarousel_7 from "@/app/images/home/carousel/Home_carrusel7_Experiencia_Trekking.png";
 import ImgCarousel_8 from "@/app/images/home/carousel/Home_carrusel8_Experiencia_guitarreada.png";
 import ImgCarousel_9 from "@/app/images/home/carousel/Home_carrusel9_Experiencia_Kayak.png";
-import { useTranslations } from "next-intl";
 
 import styles from "../home.module.scss";
 
