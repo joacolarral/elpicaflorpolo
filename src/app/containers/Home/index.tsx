@@ -3,6 +3,7 @@ import React from "react";
 import BannerHome from "./BannerHome";
 import CalendarHome from "./CalendarHome";
 import CarouselHome from "./CarouselHome";
+import ExperiencesCardHome from "./ExperiencesCardHome";
 
 const Home: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const Home: React.FC = () => {
       <BannerHome />
       <CalendarHome />
       <CarouselHome />
+      <ExperiencesCardHome />
     </div>
   );
 };

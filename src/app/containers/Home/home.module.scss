@@ -52,3 +52,17 @@
   z-index: 99;
   width: 430px;
 }
+
+// EXPERIENCES HOME
+
+.experiencesCardHomeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.cardsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
