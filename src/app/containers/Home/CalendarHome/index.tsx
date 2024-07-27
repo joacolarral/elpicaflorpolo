@@ -12,8 +12,9 @@ import HomeCalendarSpring from "@/app/images/home/Home_primavera_El_Pica.png";
 import HomeCalendarSummer from "@/app/images/home/Home_verano_Patagonia.png";
 import { SeasonType } from "@/app/types";
 
-import CalendarCards from "../components/CalendarCards";
 import styles from "../home.module.scss";
+
+import CalendarCards from "./CalendarCards";
 
 const CalendarHome: React.FC = () => {
   const calendarHomeT = useTranslations("HOME.CALENDAR_SECTION");
