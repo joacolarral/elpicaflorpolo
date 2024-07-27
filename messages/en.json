@@ -15,6 +15,21 @@
     "CAROUSEL_HOME": {
       "TITLE": "LA EXPERIENCIA",
       "SUBTITLE": "El polo es más que el partido, es una experiencia que combina deporte, naturaleza y encuentro."
+    },
+    "EXPERIENCES_CARD_HOME": {
+      "TITLE": "TRES PROPUESTAS EXCLUSIVAS:",
+      "CARD_1": {
+        "TITLE": "Día de polo",
+        "DESCRIPTION": "Día completo de introducción al polo\nTour por el club\n1 práctica de polo\nAsado"
+      },
+      "CARD_2": {
+        "TITLE": "Semana de polo",
+        "DESCRIPTION": "Programa semanal de aprendizaje\nAlojamiento\n4 prácticas\n3 días de taqueo con contenido teórico"
+      },
+      "CARD_3": {
+        "TITLE": "Evento corporativo",
+        "DESCRIPTION": "Una experiencia de introducción al mundo del polo, un asado tradicional y un partido de exhibición"
+      }
     }
   }
 }
