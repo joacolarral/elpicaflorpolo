@@ -37,6 +37,12 @@
       "TITLE": "DÓNDE ESTAMOS",
       "SUBTITLE": "Ubicado en Capilla del Señor, Buenos Aires, Argentina, a una hora de la Capital Federal.",
       "BUTTON_LINK": "Cómo llegar"
+    },
+    "TOURNAMENT_SECTION": {
+      "TITLE": "TORNEOS",
+      "SUBTITLE": "En El Picaflor Polo Club organizamos torneos de dos semanas de Marzo a Diciembre, con equipos de 8 y 12 goles. Ofrecemos caballos, petiseros y equipos. Pedí el calendario de torneos e inscribite.",
+      "INPUT_PLACEHOLDER": "Mail de contacto",
+      "BUTTON_LABEL": "Enviar"
     }
   }
 }
