@@ -4,6 +4,7 @@
   font-weight: 600;
   font-size: 1.1rem;
   border-radius: 24px;
+  font-family: Montserrat;
   padding: 0.5rem 0;
   width: 13.8rem;
   background-color: transparent;
@@ -23,8 +24,8 @@
   color: $secondary_color_light;
   border-color: $secondary_color_light;
   background-color: $background_secondary_color;
-  font-weight: 700;
   &:hover {
+    font-weight: 700;
     background-color: rgba(214, 219, 228, 0.5);
   }
 }

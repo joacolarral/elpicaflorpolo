@@ -31,5 +31,12 @@
         "DESCRIPTION": "Una experiencia de introducción al mundo del polo, un asado tradicional y un partido de exhibición"
       }
     }
+  },
+  "PICAFLOR": {
+    "MAP_SECTION": {
+      "TITLE": "DÓNDE ESTAMOS",
+      "SUBTITLE": "Ubicado en Capilla del Señor, Buenos Aires, Argentina, a una hora de la Capital Federal.",
+      "BUTTON_LINK": "Cómo llegar"
+    }
   }
 }
