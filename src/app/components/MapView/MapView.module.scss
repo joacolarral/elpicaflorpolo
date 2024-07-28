@@ -1,0 +1,19 @@
+.containerMapView {
+  display: flex;
+  gap: 3rem;
+}
+
+.imageContainer {
+  flex: 1.4;
+}
+
+.containerContentMapView {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  flex: 1;
+  img {
+    margin-top: 3rem;
+  }
+}

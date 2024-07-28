@@ -24,14 +24,13 @@ const Button: FC<ButtonProps> = ({
     isSecondaryButton ? styles.secondaryButton : styles.primaryButton,
     disabled && styles.disabled
   );
-  return redirect ? (
-    <Link className={buttonStyles} href={redirect}>
-      {children}
+
+  return (
+    <Link href={redirect || ""} target="_blank">
+      <button className={buttonStyles} onClick={onClick} {...rest}>
+        {children}
+      </button>
     </Link>
-  ) : (
-    <button className={buttonStyles} onClick={onClick} {...rest}>
-      {children}
-    </button>
   );
 };
 
