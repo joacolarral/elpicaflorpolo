@@ -1,8 +1,11 @@
+"use client";
+
 import cs from "classnames";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
-import React from "react";
+import React, { useMemo } from "react";
 
 import Container from "@/app/components/Container";
 import PicaflorLogo from "@/app/images/logos/el_picaflor.svg";
@@ -15,12 +18,26 @@ import styles from "./Navbar.module.scss";
 const Navbar: React.FC = () => {
   const navbarT = useTranslations("NAVBAR");
   const navbarStyles = cs(styles.container, styles.fixedNavbar);
+  const pathname = usePathname();
+
+  const currentLang = useMemo(() => {
+    if (pathname.includes("/es")) return "es";
+    if (pathname.includes("/en")) return "en";
+    return "";
+  }, [pathname]);
 
   return (
     <Container className={navbarStyles}>
       <div className={styles.languagesContainer}>
         {Object.entries(LANGUAGES).map(([key, lang]) => (
-          <Link className={styles.language} href={`/${lang}`} key={key}>
+          <Link
+            className={styles.language}
+            href={`/${lang}`}
+            key={key}
+            style={{
+              fontWeight: currentLang === lang ? 700 : 500,
+            }}
+          >
             {lang.toLocaleUpperCase()}
           </Link>
         ))}

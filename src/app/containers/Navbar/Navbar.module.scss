@@ -7,6 +7,7 @@
   justify-content: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  padding-right: 3rem;
 }
 
 .fixedNavbar {
@@ -21,6 +22,7 @@
   display: flex;
   justify-content: flex-end;
   gap: 1.5rem;
+  padding-right: 2rem;
 }
 
 .language {
@@ -32,7 +34,7 @@
 .contentContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 6em;
 }
 
 .logosContainer {
@@ -42,14 +44,17 @@
 }
 
 .navbarItemsContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1.8fr 1.8fr 1.3fr;
+  text-align: center;
+  flex: 1 0 auto;
 }
 
 .navItem {
   position: relative;
   padding: 0 1.5rem;
   text-decoration: none;
-  color: $primary_color_light; // Ajusta el color según tu diseño
+  color: $primary_color_light;
 
   &::after {
     content: "";
@@ -58,11 +63,15 @@
     top: 50%;
     transform: translateY(-50%);
     width: 2px;
-    height: 1.2rem; // Ajusta la altura según tu diseño
-    background-color: $primary_color_light; // Ajusta el color según tu diseño
+    height: 1.2rem;
+    background-color: $primary_color_light;
   }
 
   &:last-child::after {
     display: none;
+  }
+
+  &:hover {
+    font-weight: 700;
   }
 }
