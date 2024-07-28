@@ -1,11 +1,11 @@
 import classNames from "classnames";
 import Link from "next/link";
-import React, { ButtonHTMLAttributes, FC } from "react";
+import React, { ButtonHTMLAttributes, FC, MouseEventHandler } from "react";
 
 import styles from "./Button.module.scss";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  onClick?: () => void;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   redirect?: string | undefined;
   isSecondaryButton?: boolean;
   disabled?: boolean;
@@ -25,13 +25,21 @@ const Button: FC<ButtonProps> = ({
     disabled && styles.disabled
   );
 
-  return (
-    <Link href={redirect || ""} target="_blank">
+  if (redirect) {
+    return (
+      <Link href={redirect} target="_blank">
+        <button className={buttonStyles} onClick={onClick} {...rest}>
+          {children}
+        </button>
+      </Link>
+    );
+  } else {
+    return (
       <button className={buttonStyles} onClick={onClick} {...rest}>
         {children}
       </button>
-    </Link>
-  );
+    );
+  }
 };
 
 export default Button;
