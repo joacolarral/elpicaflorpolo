@@ -4,7 +4,7 @@ import classNames from "classnames";
 import React from "react";
 // Import Swiper React components
 import { Scrollbar } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, SwiperProps } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -12,18 +12,20 @@ import "swiper/css/scrollbar";
 
 import styles from "./Carousel.module.scss";
 
-// Define the type for the slides prop
 interface Slide {
   id: number;
   value: any;
 }
 
-interface CarouselProps {
+interface CustomCarouselProps {
   slides: Slide[];
   containerClassname?: string;
   slideClassname?: string;
   scrollbarStylesAlternative?: boolean | undefined;
 }
+
+// Intersect SwiperProps with CustomCarouselProps
+type CarouselProps = CustomCarouselProps & SwiperProps;
 
 const Carousel: React.FC<CarouselProps> = ({
   slides,
@@ -47,11 +49,11 @@ const Carousel: React.FC<CarouselProps> = ({
       scrollbar={{
         hide: false,
         horizontalClass: scrollBarStyles,
+        draggable: true,
       }}
       modules={[Scrollbar]}
       className={carouselsContainerStyles}
       {...rest}
-      grabCursor
     >
       {slides.map((slide) => {
         return (

@@ -43,6 +43,10 @@
       "SUBTITLE": "En El Picaflor Polo Club organizamos torneos de dos semanas de Marzo a Diciembre, con equipos de 8 y 12 goles. Ofrecemos caballos, petiseros y equipos. Pedí el calendario de torneos e inscribite.",
       "INPUT_PLACEHOLDER": "Mail de contacto",
       "BUTTON_LABEL": "Enviar"
+    },
+    "CAROUSEL_PICAFLOR": {
+      "TITLE": "EVENTOS Y ACTIVIDADES",
+      "SUBTITLE": "Diseñamos experiencias únicas que combinan polo con gastronomía, campo, turismo y alojamiento."
     }
   }
 }

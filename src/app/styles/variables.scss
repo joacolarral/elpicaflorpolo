@@ -2,7 +2,12 @@
 $primary_color_light: rgb(255, 255, 255);
 $secondary_color_light: rgba(33, 39, 54, 1);
 $background_secondary_color: rgb(255, 255, 255);
-$background_light: linear-gradient(270deg, #ffffff 43.22%, #d6dbe4 108.88%);
+$background_light_primary: linear-gradient(
+  270deg,
+  #ffffff 43.22%,
+  #d6dbe4 108.88%
+);
+$background_light_secondary: #fff;
 $container-space-around: 8rem 8rem 8rem 5rem;
 $container-space-vertical-left: 8rem 0 8rem 5rem;
 $space-left: 5rem;

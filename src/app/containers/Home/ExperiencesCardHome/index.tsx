@@ -13,7 +13,7 @@ const ExperiencesCardHome: React.FC = () => {
   const cardsExperience = [Card_1, Card_2, Card_3];
 
   return (
-    <Container className={styles.experiencesCardHomeContainer}>
+    <Container className={styles.experiencesCardHomeContainer} alternativeBg>
       <h2>{experiencesCardHomeT("TITLE")}</h2>
       <div className={styles.cardsContainer}>
         {cardsExperience.map((cardImage, index) => (
