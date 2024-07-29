@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+
+// CAROUSEL PICAFLOR
+
+.carouselPicaflorContainer {
+  padding: 8rem 0;
+}
+
+.containerContentHeaderCarousel {
+  padding: 0rem 5rem;
+}
+
+.containerImageCarousel {
+  padding-bottom: 2rem;
+  width: 100%;
+  transition: filter 0.5s ease;
+}
+
+.inactiveImage {
+  filter: grayscale(100%);
+}
