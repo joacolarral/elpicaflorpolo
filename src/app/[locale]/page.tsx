@@ -1,3 +1,4 @@
+import BreedingTamingTraining from "../containers/Breeding_Taming_Training";
 import HomeUI from "../containers/Home";
 import Navbar from "../containers/Navbar";
 import Patagonia from "../containers/Patagonia";
@@ -10,6 +11,7 @@ export default function Home() {
       <HomeUI />
       <Picaflor />
       <Patagonia />
+      <BreedingTamingTraining />
     </div>
   );
 }
