@@ -3,7 +3,7 @@ import React from "react";
 
 import Banner from "@/app/images/picaflor/Banner_picaflor.png";
 
-import CarouselPicaflor from "./CarrouselPicaflor";
+import CarouselPicaflor from "./CarouselPicaflor";
 import MapPicaflor from "./MapPicaflor";
 import TournamentPicaflor from "./TournamentsPicaflor";
 

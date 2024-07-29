@@ -6,13 +6,11 @@ import MapView from "@/app/components/MapView";
 import HOUSE_MAP from "@/app/images/picaflor/Img_Donde_estamos_Alojamiento_ElPicaflor.png";
 import MAP_IMG from "@/app/images/picaflor/Picaflor_mapaBsAs.svg";
 
-import styles from "../picaflor.module.scss";
-
 const MapPicaflor: React.FC = () => {
   const t = useTranslations("PICAFLOR.MAP_SECTION");
 
   return (
-    <Container className={styles.containerMapPicaflor}>
+    <Container>
       <MapView
         imgMap={MAP_IMG}
         title={t("TITLE")}
