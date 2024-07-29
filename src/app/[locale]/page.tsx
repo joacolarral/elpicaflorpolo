@@ -1,5 +1,6 @@
 import HomeUI from "../containers/Home";
 import Navbar from "../containers/Navbar";
+import Patagonia from "../containers/Patagonia";
 import Picaflor from "../containers/Picaflor";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Navbar />
       <HomeUI />
       <Picaflor />
+      <Patagonia />
     </div>
   );
 }

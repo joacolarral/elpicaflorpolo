@@ -48,5 +48,22 @@
       "TITLE": "EVENTOS Y ACTIVIDADES",
       "SUBTITLE": "Diseñamos experiencias únicas que combinan polo con gastronomía, campo, turismo y alojamiento."
     }
+  },
+  "PATAGONIA": {
+    "MAP_SECTION": {
+      "TITLE": "DÓNDE ESTAMOS",
+      "SUBTITLE": "Arelauquen Golf & Country Club, ubicado en Bariloche, Río Negro, Patagonia Argentina, rodeado de naturaleza, parques nacionales, glaciares, ríos, lagos y montañas.",
+      "BUTTON_LINK": "Cómo llegar"
+    },
+    "TOURNAMENT_SECTION": {
+      "TITLE": "TORNEOS",
+      "SUBTITLE": "En Patagonia Polo organizamos torneos de una semana en Enero y Febrero, con equipos de 6 a 8 goles. Proveemos caballos, petiseros y equipos. Consultanos disponibilidad y planificá tu visita.",
+      "INPUT_PLACEHOLDER": "Mail de contacto",
+      "BUTTON_LABEL": "Enviar"
+    },
+    "CAROUSEL_PATAGONIA": {
+      "TITLE": "EXPERIENCIAS PERSONALIZADAS",
+      "SUBTITLE": "Creamos viajes únicos y a medida, combinando polo con gastronomía, senderismo, trekking, kayak, ciclismo, navegación y pesca, entre otros. Contactate y diseñemos juntos tu experiencia en la Patagonia Argentina."
+    }
   }
 }
