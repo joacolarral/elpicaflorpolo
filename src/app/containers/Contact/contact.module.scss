@@ -1,0 +1,168 @@
+@import "../../styles/variables.scss";
+
+// CONTACT USER
+
+.contactUserContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.contactUserContent {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  button {
+    background: rgba(255, 255, 255, 0.3);
+
+    &:hover {
+      background: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  border: 1px solid $secondary_color_light;
+  margin-bottom: 1.5rem;
+  input,
+  textarea {
+    width: 100%;
+    font-size: 1.1rem;
+    font-family: "Montserrat";
+    font-weight: 400;
+    background-color: transparent;
+    padding: 1rem;
+    border: none;
+    color: $secondary_color_light;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
+
+    &::placeholder {
+      color: $secondary_color_light;
+      opacity: 0.7;
+      border: 0;
+    }
+
+    &:focus {
+      border-color: none;
+
+      &::placeholder {
+        color: $secondary_color_light;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  input[type="text"] {
+    border-bottom: 1px solid $secondary_color_light;
+  }
+  textarea {
+    resize: none;
+  }
+}
+
+.contactUserLogosContainer {
+  padding: 3rem 0;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+
+  > div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+.contactUserSocialMedia {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.horizontalLine {
+  background-color: $secondary_color_light;
+  width: 1px;
+  height: 7rem;
+}
+
+// CONTACT BRAND
+
+.contactBrandContainer {
+  height: 65vh;
+  background: url("../../images/contact/Img_fondo_zocalo_PaisajePolo.png");
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contactBrandContainerBrands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 10rem;
+  gap: 2rem;
+  div {
+    padding: 0 2rem;
+  }
+}
+
+.contactBrandContentContainer {
+  h5 {
+    color: $primary_color_light;
+  }
+
+  input {
+    font-size: 1.1rem;
+    margin: 1rem 2rem 1rem 0;
+    font-family: "Montserrat";
+    width: 40%;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: #fff;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.9);
+      opacity: 1;
+      border: 0;
+    }
+
+    &:focus {
+      border-color: #fff;
+
+      &::placeholder {
+        color: #fff;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.inputError {
+  border: 1px solid red;
+}
+
+.error {
+  color: red;
+  font-size: 0.875rem;
+  height: 32px;
+}

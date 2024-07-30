@@ -1,4 +1,5 @@
 import BreedingTamingTraining from "../containers/Breeding_Taming_Training";
+import Contact from "../containers/Contact";
 import HomeUI from "../containers/Home";
 import Navbar from "../containers/Navbar";
 import Patagonia from "../containers/Patagonia";
@@ -12,6 +13,7 @@ export default function Home() {
       <Picaflor />
       <Patagonia />
       <BreedingTamingTraining />
+      <Contact />
     </div>
   );
 }

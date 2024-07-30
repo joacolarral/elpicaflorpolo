@@ -59,6 +59,10 @@
   display: flex;
   flex-direction: column;
   gap: 5rem;
+
+  h2 {
+    color: $secondary_color_light;
+  }
 }
 .cardsContainer {
   display: flex;

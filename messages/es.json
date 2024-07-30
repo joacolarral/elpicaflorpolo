@@ -65,5 +65,18 @@
       "TITLE": "EXPERIENCIAS PERSONALIZADAS",
       "SUBTITLE": "Creamos viajes únicos y a medida, combinando polo con gastronomía, senderismo, trekking, kayak, ciclismo, navegación y pesca, entre otros. Contactate y diseñemos juntos tu experiencia en la Patagonia Argentina."
     }
+  },
+  "CONTACT_USER": {
+    "TITLE": "CONTACTATE",
+    "SUBTITLE": "Llená el formulario y nos pondremos en contacto",
+    "INPUT_FULLNAME": "Nombre y apellido",
+    "INPUT_MAIL": "Mail de contacto",
+    "INPUT_TEXTBOX": "Mensaje",
+    "BUTTON_LABEL": "Enviar"
+  },
+  "CONTACT_BRAND": {
+    "INPUT_LABEL": "Convertite en sponsor",
+    "INPUT_MAIL": "Mail de contacto",
+    "BUTTON_LABEL": "Enviar"
   }
 }
