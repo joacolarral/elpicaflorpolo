@@ -1,0 +1,73 @@
+@import "../../styles/variables.scss";
+
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  background-color: $secondary_color_light;
+  align-items: center;
+  padding: 3rem 5rem;
+}
+
+.sectionBrandsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  gap: 10px;
+
+  p {
+    font-weight: 400;
+    font-size: 0.75em;
+    width: 16em;
+  }
+}
+
+.horizontalLine {
+  grid-column: 2 / 2;
+  height: 2px;
+  background-color: white;
+  width: 100%;
+}
+
+.sectionBrandSectionContainer {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+}
+
+.linksText {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.socialMediaContainer {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.socialMediaWithoutText {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.whatsapp {
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
