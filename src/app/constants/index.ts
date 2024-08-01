@@ -4,11 +4,11 @@ export const LANGUAGES = {
 };
 
 export const NAVBAR_ITEMS = {
-  HOME: "HOME",
-  PICAFLOR: "PICAFLOR",
-  PATAGONIA: "PATAGONIA",
-  BREEDING: "BREEDING",
-  CONTACT: "CONTACT",
+  HOME: "home",
+  PICAFLOR: "el-picaflor-polo",
+  PATAGONIA: "patagonia-polo",
+  BREEDING: "breeding",
+  CONTACT: "contact-us",
 };
 
 // HOME

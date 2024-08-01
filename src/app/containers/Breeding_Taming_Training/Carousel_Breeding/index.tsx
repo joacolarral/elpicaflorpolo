@@ -37,6 +37,13 @@ const createSlides = (activeIndex: number): Slide[] => {
           [styles.inactiveImage]: index > activeIndex,
         })}
       >
+        {index === 0 && (
+          <p>
+            Nos dedicamos a la cría de caballos de polo de alta calidad.
+            Nuestros caballos reciben el mejor cuidado y entrenamiento para
+            garantizar un rendimiento óptimo.
+          </p>
+        )}
         <Image layout="responsive" src={image.src} alt={image.alt} />
       </div>
     ),
@@ -60,7 +67,8 @@ const CarouselBreedingTamingTraining: React.FC = () => {
         centeredSlidesBounds
         slideToClickedSlide
         normalizeSlideIndex={false}
-        grabCursor
+        width={1100}
+        slidesOffsetBefore={80}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       />
     </Container>

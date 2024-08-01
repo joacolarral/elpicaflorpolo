@@ -16,7 +16,7 @@ import { LANGUAGES, NAVBAR_ITEMS } from "../../constants";
 import styles from "./Navbar.module.scss";
 
 const Navbar: React.FC = () => {
-  const navbarT = useTranslations("NAVBAR");
+  const t = useTranslations("NAVBAR");
   const navbarStyles = cs(styles.container, styles.fixedNavbar);
   const pathname = usePathname();
 
@@ -51,11 +51,11 @@ const Navbar: React.FC = () => {
           {Object.entries(NAVBAR_ITEMS).map(([key, text], index, array) => (
             <Link
               className={styles.navItem}
-              href={`#${key.toLocaleLowerCase()}`}
+              href={`#${text.toLocaleLowerCase()}`}
               key={key}
               data-last={index === array.length - 1}
             >
-              {navbarT(text).toLocaleUpperCase()}
+              {t(key).toLocaleUpperCase()}
             </Link>
           ))}
         </div>

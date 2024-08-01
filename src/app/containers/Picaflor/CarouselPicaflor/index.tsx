@@ -65,7 +65,6 @@ const CarouselPicaflor: React.FC = () => {
         centeredSlidesBounds
         slideToClickedSlide
         normalizeSlideIndex={false}
-        grabCursor
       />
     </Container>
   );
