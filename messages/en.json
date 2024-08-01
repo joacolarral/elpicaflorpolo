@@ -1,77 +1,82 @@
 {
   "NAVBAR": {
-    "HOME": "home",
-    "PICAFLOR": "el picaflor polo club",
-    "PATAGONIA": "patagonia polo",
-    "BREEDING": "breeding and horses",
-    "CONTACT": "contact"
+    "HOME": "Home",
+    "PICAFLOR": "El Picaflor Polo",
+    "PATAGONIA": "Patagonia Polo",
+    "BREEDING": "Breeding and horses",
+    "CONTACT": "Contact us"
   },
   "HOME": {
     "CALENDAR_SECTION": {
-      "TITLE": "A JOURNEY TO EXPLORE",
-      "SUBTITLE": "Experience polo year-round in Buenos Aires and Patagonia",
-      "BUTTON": "Discover"
+      "TITLE": "A path to explore",
+      "SUBTITLE": "Experience Polo all year round in both Buenos Aires and Patagonia",
+      "BUTTON": "Discover it"
     },
     "CAROUSEL_HOME": {
-      "TITLE": "LA EXPERIENCIA",
+      "TITLE": "Experience Polo in Argentina",
       "SUBTITLE": "El polo es más que el partido, es una experiencia que combina deporte, naturaleza y encuentro."
     },
     "EXPERIENCES_CARD_HOME": {
-      "TITLE": "TRES PROPUESTAS EXCLUSIVAS:",
+      "TITLE": "Three exclusive proposals",
       "CARD_1": {
-        "TITLE": "Día de polo",
-        "DESCRIPTION": "Día completo de introducción al polo\nTour por el club\n1 práctica de polo\nAsado"
+        "TITLE": "Polo day",
+        "DESCRIPTION": "Full day introduction to polo\nClub tour\n1 polo practice\nAsado"
       },
       "CARD_2": {
-        "TITLE": "Semana de polo",
-        "DESCRIPTION": "Programa semanal de aprendizaje\nAlojamiento\n4 prácticas\n3 días de taqueo con contenido teórico"
+        "TITLE": "Polo week",
+        "DESCRIPTION": "Weekly learning program with stay\n4 practices\n3 tacking days with theoretical content"
       },
       "CARD_3": {
-        "TITLE": "Evento corporativo",
-        "DESCRIPTION": "Una experiencia de introducción al mundo del polo, un asado tradicional y un partido de exhibición"
+        "TITLE": "Corporate event",
+        "DESCRIPTION": "Tacking and asado experience for groups up to 40 people"
       }
     }
   },
   "PICAFLOR": {
     "MAP_SECTION": {
-      "TITLE": "DÓNDE ESTAMOS",
-      "SUBTITLE": "Ubicado en Capilla del Señor, Buenos Aires, Argentina, a una hora de la Capital Federal.",
-      "BUTTON_LINK": "Cómo llegar"
+      "TITLE": "Location",
+      "SUBTITLE": "Situated in Capilla del Señor, Buenos Aires, Argentina, just one hour away from downtown Buenos Aires.",
+      "BUTTON_LINK": "Google Maps link"
     },
     "TOURNAMENT_SECTION": {
-      "TITLE": "TORNEOS",
-      "SUBTITLE": "En El Picaflor Polo Club organizamos torneos de dos semanas de Marzo a Diciembre, con equipos de 8 y 12 goles. Ofrecemos caballos, petiseros y equipos. Pedí el calendario de torneos e inscribite.",
-      "INPUT_PLACEHOLDER": "Mail de contacto",
-      "BUTTON_LABEL": "Enviar"
+      "TITLE": "Tournaments",
+      "SUBTITLE": "At El Picaflor Polo Club we organize two-week tournaments from March to December, with teams of 8 and 12 goals. We offer horses, grooms, and teams.",
+      "INPUT_PLACEHOLDER": "Contact email",
+      "BUTTON_LABEL": "Sign up"
     },
     "CAROUSEL_PICAFLOR": {
-      "TITLE": "EVENTOS Y ACTIVIDADES",
-      "SUBTITLE": "Diseñamos experiencias únicas que combinan polo con gastronomía, campo, turismo y alojamiento."
+      "TITLE": "Events and activities",
+      "SUBTITLE": "We design unique experiences that combine polo with gastronomy, countryside, tourism, and lodging."
     }
   },
   "PATAGONIA": {
     "MAP_SECTION": {
-      "TITLE": "DÓNDE ESTAMOS",
-      "SUBTITLE": "Arelauquen Golf & Country Club, ubicado en Bariloche, Río Negro, Patagonia Argentina, rodeado de naturaleza, parques nacionales, glaciares, ríos, lagos y montañas.",
-      "BUTTON_LINK": "Cómo llegar"
+      "TITLE": "Location",
+      "SUBTITLE": "Arelauquen Golf & Country Club, situated in Bariloche, Río Negro, Patagonia Argentina, is surrounded by nature, national parks, glaciers, rivers, lakes, and mountains.",
+      "BUTTON_LINK": "Google Maps link"
     },
     "TOURNAMENT_SECTION": {
-      "TITLE": "TORNEOS",
-      "SUBTITLE": "En Patagonia Polo organizamos torneos de una semana en Enero y Febrero, con equipos de 6 a 8 goles. Proveemos caballos, petiseros y equipos. Consultanos disponibilidad y planificá tu visita.",
-      "INPUT_PLACEHOLDER": "Mail de contacto",
-      "BUTTON_LABEL": "Enviar"
+      "TITLE": "Tournaments",
+      "SUBTITLE": "In Patagonia Polo we organize one week tournaments in January and February, with teams of 6 to 8 goals. We provide horses, grooms and equipment.",
+      "INPUT_PLACEHOLDER": "Contact email",
+      "BUTTON_LABEL": "Sign up"
     },
     "CAROUSEL_PATAGONIA": {
-      "TITLE": "EXPERIENCIAS PERSONALIZADAS",
-      "SUBTITLE": "Creamos viajes únicos y a medida, combinando polo con gastronomía, senderismo, trekking, kayak, ciclismo, navegación y pesca, entre otros. Contactate y diseñemos juntos tu experiencia en la Patagonia Argentina."
+      "TITLE": "Personalized experiences",
+      "DESCRIPTION": "We create unique and tailor-made trips, combining polo with gastronomy, hiking, trekking, kayaking, cycling, sailing and fishing, among others."
     }
   },
-  "CONTACT_FORM": {
-    "TITLE": "CONTACTATE",
-    "SUBTITLE": "Llená el formulario y nos pondremos en contacto",
-    "INPUT_FULLNAME": "Nombre y apellido",
-    "INPUT_MAIL": "Mail de contacto",
-    "INPUT_TEXTBOX": "Mensaje",
-    "BUTTON_LABEL": "Enviar"
+  "CONTACT_USER": {
+    "TITLE": "Contact us",
+    "SUBTITLE": "Fill out the form and we will contact you as soon as possible",
+    "INPUT_FULLNAME": "Name and surname",
+    "INPUT_MAIL": "Contact email",
+    "INPUT_TEXTBOX": "Message",
+    "BUTTON_LABEL": "Send"
+  },
+  "CONTACT_BRAND": {
+    "INPUT_LABEL": "Convertite en sponsor",
+    "INPUT_MAIL": "Contact email",
+    "BUTTON_LABEL": "Send"
   }
 }
