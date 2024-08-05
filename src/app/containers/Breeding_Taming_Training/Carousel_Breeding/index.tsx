@@ -69,6 +69,7 @@ const CarouselBreedingTamingTraining: React.FC = () => {
         normalizeSlideIndex={false}
         width={1100}
         slidesOffsetBefore={80}
+        freeMode
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       />
     </Container>

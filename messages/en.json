@@ -46,7 +46,15 @@
     },
     "CAROUSEL_PICAFLOR": {
       "TITLE": "Events and activities",
-      "SUBTITLE": "We design unique experiences that combine polo with gastronomy, countryside, tourism, and lodging."
+      "SUBTITLE": "We design unique experiences that combine polo with gastronomy, countryside, tourism, and lodging.",
+      "PICTURE_1": "Accommodation",
+      "PICTURE_2": "",
+      "PICTURE_3": "Events",
+      "PICTURE_4": "",
+      "PICTURE_5": "Gastronomy",
+      "PICTURE_6": "",
+      "PICTURE_7": "Training",
+      "PICTURE_8": ""
     }
   },
   "PATAGONIA": {
