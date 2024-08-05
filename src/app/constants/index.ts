@@ -82,5 +82,6 @@ export const SOCIAL_MEDIA_BRANDS = {
 export const LOGOS = {
   PICAFLOR_LOGO: require("@/app/images/logos-sponsor/zocalo_Logo_ElPicaflor_blanco.svg"),
   PATAGONIA_LOGO: require("@/app/images/logos-sponsor/zocalo_Logo_Patagonia_blanco.svg"),
-  ...SOCIAL_MEDIA_BRANDS,
+  PICAFLOR: SOCIAL_MEDIA_BRANDS[BRAND_NAME.PICAFLOR],
+  PATAGONIA: SOCIAL_MEDIA_BRANDS[BRAND_NAME.PATAGONIA],
 };
