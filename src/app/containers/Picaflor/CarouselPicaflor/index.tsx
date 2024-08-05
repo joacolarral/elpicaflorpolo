@@ -43,6 +43,7 @@ const createSlides = (t: any): Slide[] => {
     id: index + 2,
     value: (
       <div className={styles.containerImageCarousel}>
+        <h3>{t(`PICTURE_${index + 1}`)}</h3>
         <Image layout="responsive" src={image.src} alt={image.alt} />
       </div>
     ),
@@ -65,6 +66,8 @@ const CarouselPicaflor: React.FC = () => {
         centeredSlidesBounds
         slideToClickedSlide
         normalizeSlideIndex={false}
+        freeMode
+        width={1350}
       />
     </Container>
   );

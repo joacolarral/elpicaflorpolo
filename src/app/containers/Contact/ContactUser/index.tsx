@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 import Button from "@/app/components/Button";
 import Container from "@/app/components/Container";
 import TitleAndSubtitle from "@/app/components/TitleAndSubtitle";
+import { BRAND_NAME, SOCIAL_MEDIA_BRANDS } from "@/app/constants";
 import IMAGE_SRC from "@/app/images/contact/Seccion_Contacto_ImgCabalgata.png";
 import PICAFLOR_LOGO from "@/app/images/logos-sponsor/contacto_Logo_ElPicaflor_positivo.svg";
 import FACEBOOK from "@/app/images/logos-sponsor/contacto_Logo_Fb.svg";
@@ -12,7 +14,10 @@ import PATAGONIA_LOGO from "@/app/images/logos-sponsor/contacto_Logo_Patagonia_p
 
 import styles from "../contact.module.scss";
 
-const Logos = [PICAFLOR_LOGO, PATAGONIA_LOGO];
+const logos = {
+  [BRAND_NAME.PICAFLOR]: PICAFLOR_LOGO,
+  [BRAND_NAME.PATAGONIA]: PATAGONIA_LOGO,
+};
 
 const ContactUser = () => {
   const t = useTranslations("CONTACT_USER");
@@ -38,15 +43,22 @@ const ContactUser = () => {
         <Button isSecondaryButton>{t("BUTTON_LABEL")}</Button>
 
         <div className={styles.contactUserLogosContainer}>
-          {Logos.map((logo, i) => (
-            <div key={i} className={styles.contactUser}>
+          {Object.entries(BRAND_NAME).map(([key]) => (
+            <div key={key} className={styles.contactUser}>
               <div>
-                <Image src={logo} alt={`logo_${i + 1}`} />
+                <Image src={logos[key]} alt={`logo_${key}`} />
               </div>
               <div className={styles.horizontalLine} />
               <div className={styles.contactUserSocialMedia}>
-                <Image src={FACEBOOK} alt="facebook_logo" />
-                <Image src={INSTAGRAM} alt="instagram_logo" />
+                <Link href={SOCIAL_MEDIA_BRANDS[key][1].link} target="_blank">
+                  <Image src={FACEBOOK} alt={SOCIAL_MEDIA_BRANDS[key][1].alt} />
+                </Link>
+                <Link href={SOCIAL_MEDIA_BRANDS[key][0].link} target="_blank">
+                  <Image
+                    src={INSTAGRAM}
+                    alt={SOCIAL_MEDIA_BRANDS[key][0].alt}
+                  />
+                </Link>
               </div>
             </div>
           ))}

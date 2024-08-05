@@ -7,9 +7,9 @@ import React, { useMemo, useState } from "react";
 import Container from "@/app/components/Container";
 import TitleAndSubtitle from "@/app/components/TitleAndSubtitle";
 import { SEASON } from "@/app/constants";
-import HomeCalendarAutumn from "@/app/images/home/Home_otoño_El_Picaflor.png";
-import HomeCalendarSpring from "@/app/images/home/Home_primavera_El_Pica.png";
-import HomeCalendarSummer from "@/app/images/home/Home_verano_Patagonia.png";
+import HomeCalendarAutumn from "@/app/images/home/Home_otoño.png";
+import HomeCalendarSpring from "@/app/images/home/Home_primavera.png";
+import HomeCalendarSummer from "@/app/images/home/Home_verano.png";
 import { SeasonType } from "@/app/types";
 
 import styles from "../home.module.scss";
@@ -41,7 +41,9 @@ const CalendarHome: React.FC = () => {
           setHoveredCard={setHoveredCard}
         />
       </div>
-      <Image layout="responsive" src={imageSrc} alt="HomeCalendarPhoto" />
+      <div className={styles.pictureContainer}>
+        <Image width={515} src={imageSrc} alt="HomeCalendarPhoto" />
+      </div>
     </Container>
   );
 };

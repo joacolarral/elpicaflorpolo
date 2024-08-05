@@ -46,7 +46,15 @@
     },
     "CAROUSEL_PICAFLOR": {
       "TITLE": "EVENTOS Y ACTIVIDADES",
-      "SUBTITLE": "Diseñamos experiencias únicas que combinan polo con gastronomía, campo, turismo y alojamiento."
+      "SUBTITLE": "Diseñamos experiencias únicas que combinan polo con gastronomía, campo, turismo y alojamiento.",
+      "PICTURE_1": "Alojamiento",
+      "PICTURE_2": "",
+      "PICTURE_3": "Eventos",
+      "PICTURE_4": "",
+      "PICTURE_5": "Gastronomía",
+      "PICTURE_6": "",
+      "PICTURE_7": "Entrenamiento",
+      "PICTURE_8": ""
     }
   },
   "PATAGONIA": {

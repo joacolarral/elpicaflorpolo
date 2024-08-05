@@ -3,7 +3,7 @@
 import classNames from "classnames";
 import React from "react";
 // Import Swiper React components
-import { Scrollbar } from "swiper/modules";
+import { FreeMode, Mousewheel, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide, SwiperProps } from "swiper/react";
 
 // Import Swiper styles
@@ -51,7 +51,12 @@ const Carousel: React.FC<CarouselProps> = ({
         horizontalClass: scrollBarStyles,
         draggable: true,
       }}
-      modules={[Scrollbar]}
+      direction="horizontal"
+      mousewheel={{
+        forceToAxis: true,
+        enabled: true,
+      }}
+      modules={[Scrollbar, FreeMode, Mousewheel]}
       className={carouselsContainerStyles}
       {...rest}
     >

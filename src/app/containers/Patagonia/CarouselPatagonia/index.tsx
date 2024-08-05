@@ -65,7 +65,8 @@ const CarouselPatagonia: React.FC = () => {
         centeredSlidesBounds
         slideToClickedSlide
         normalizeSlideIndex={false}
-        // width={1300}
+        freeMode
+        width={1350}
       />
     </Container>
   );
