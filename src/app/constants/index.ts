@@ -11,18 +11,19 @@ export const NAVBAR_ITEMS = {
   CONTACT: "contact-us",
 };
 
-// HOME
-
 export const SEASON = {
   AUTUMN: "autumn",
   SPRING: "spring",
   SUMMER: "summer",
 };
 
-export const LOGOS = {
-  PICAFLOR_LOGO: require("@/app/images/logos-sponsor/zocalo_Logo_ElPicaflor_blanco.svg"),
-  PATAGONIA_LOGO: require("@/app/images/logos-sponsor/zocalo_Logo_Patagonia_blanco.svg"),
-  PICAFLOR: [
+export const BRAND_NAME = {
+  PICAFLOR: "PICAFLOR",
+  PATAGONIA: "PATAGONIA",
+};
+
+export const SOCIAL_MEDIA_BRANDS = {
+  [BRAND_NAME.PICAFLOR]: [
     {
       src: require("@/app/images/logos-sponsor/zocalo_Logo_Ig.svg"),
       link: "https://www.instagram.com/elpicaflorpolo/",
@@ -49,7 +50,7 @@ export const LOGOS = {
       alt: "VSCO",
     },
   ],
-  PATAGONIA: [
+  [BRAND_NAME.PATAGONIA]: [
     {
       src: require("@/app/images/logos-sponsor/zocalo_Logo_Ig.svg"),
       link: "https://www.instagram.com/patagonia.polo/",
@@ -76,4 +77,10 @@ export const LOGOS = {
       alt: "VSCO",
     },
   ],
+};
+
+export const LOGOS = {
+  PICAFLOR_LOGO: require("@/app/images/logos-sponsor/zocalo_Logo_ElPicaflor_blanco.svg"),
+  PATAGONIA_LOGO: require("@/app/images/logos-sponsor/zocalo_Logo_Patagonia_blanco.svg"),
+  ...SOCIAL_MEDIA_BRANDS,
 };
