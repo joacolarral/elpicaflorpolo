@@ -1,15 +1,22 @@
-import Image from "next/image";
+import { useTranslations } from "next-intl";
 import React from "react";
 
+import VideoComponent from "@/app/components/VideoComponent";
 import { NAVBAR_ITEMS } from "@/app/constants";
-import Banner from "@/app/images/breeding_taming_training/Banner_breeding.png";
+// import VIDEO_PATAGONIA from "@/app/images/videos/WEB_patagonia.mov";
 
 import CarouselBreedingTamingTraining from "./Carousel_Breeding";
 
 const BreedingTamingTraining: React.FC = () => {
+  const t = useTranslations("BREEDING_TAMING_TRAINING.VIDEO");
   return (
     <div id={NAVBAR_ITEMS.BREEDING}>
-      <Image width="1440" src={Banner} alt="Breeding Taming Trainig" />
+      <VideoComponent
+        shortTitle={t("SHORT_TITLE")}
+        bigTitle={t("BIG_TITLE")}
+        // videoSrc={VIDEO_PATAGONIA}
+        template
+      />
       <CarouselBreedingTamingTraining />
     </div>
   );

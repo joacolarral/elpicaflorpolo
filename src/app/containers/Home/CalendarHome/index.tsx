@@ -17,7 +17,7 @@ import styles from "../home.module.scss";
 import CalendarCards from "./CalendarCards";
 
 const CalendarHome: React.FC = () => {
-  const calendarHomeT = useTranslations("HOME.CALENDAR_SECTION");
+  const t = useTranslations("HOME.CALENDAR_SECTION");
   const [hoveredCard, setHoveredCard] = useState<SeasonType>(SEASON.AUTUMN);
 
   const imageSrc = useMemo(() => {
@@ -32,10 +32,7 @@ const CalendarHome: React.FC = () => {
   return (
     <Container className={styles.calendarHomeContainer} noPaddingRight>
       <div className={styles.calendarContent}>
-        <TitleAndSubtitle
-          title={calendarHomeT("TITLE")}
-          subtitle={calendarHomeT("SUBTITLE")}
-        />
+        <TitleAndSubtitle title={t("TITLE")} subtitle={t("SUBTITLE")} />
         <CalendarCards
           hoveredCard={hoveredCard}
           setHoveredCard={setHoveredCard}
