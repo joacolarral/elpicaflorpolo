@@ -7,6 +7,10 @@
     "CONTACT": "contacto"
   },
   "HOME": {
+    "VIDEO": {
+      "SHORT_TITLE": "Experimentá el",
+      "BIG_TITLE": "POLO EN LA ARGENTINA"
+    },
     "CALENDAR_SECTION": {
       "TITLE": "UN CAMINO PARA RECORRER",
       "SUBTITLE": "Experimentá el Polo durante todo el año en Buenos Aires y en la Patagonia",
@@ -33,6 +37,10 @@
     }
   },
   "PICAFLOR": {
+    "VIDEO": {
+      "SHORT_TITLE": "Conocé el mundo de",
+      "BIG_TITLE": "EL PICAFLOR POLO"
+    },
     "MAP_SECTION": {
       "TITLE": "DÓNDE ESTAMOS",
       "SUBTITLE": "Ubicado en Capilla del Señor, Buenos Aires, Argentina, a una hora de la Capital Federal.",
@@ -58,6 +66,10 @@
     }
   },
   "PATAGONIA": {
+    "VIDEO": {
+      "SHORT_TITLE": "Viví la experiencia",
+      "BIG_TITLE": "PATAGONIA POLO"
+    },
     "MAP_SECTION": {
       "TITLE": "DÓNDE ESTAMOS",
       "SUBTITLE": "Arelauquen Golf & Country Club, ubicado en Bariloche, Río Negro, Patagonia Argentina, rodeado de naturaleza, parques nacionales, glaciares, ríos, lagos y montañas.",
@@ -72,6 +84,12 @@
     "CAROUSEL_PATAGONIA": {
       "TITLE": "EXPERIENCIAS PERSONALIZADAS",
       "SUBTITLE": "Creamos viajes únicos y a medida, combinando polo con gastronomía, senderismo, trekking, kayak, ciclismo, navegación y pesca, entre otros. Contactate y diseñemos juntos tu experiencia en la Patagonia Argentina."
+    }
+  },
+  "BREEDING_TAMING_TRAINING": {
+    "VIDEO": {
+      "SHORT_TITLE": "Centro de",
+      "BIG_TITLE": "CRIA, DOMA Y HECHURA"
     }
   },
   "CONTACT_USER": {

@@ -7,6 +7,10 @@
     "CONTACT": "Contact us"
   },
   "HOME": {
+    "VIDEO": {
+      "SHORT_TITLE": "Experimentá el",
+      "BIG_TITLE": "POLO EN LA ARGENTINA"
+    },
     "CALENDAR_SECTION": {
       "TITLE": "A path to explore",
       "SUBTITLE": "Experience Polo all year round in both Buenos Aires and Patagonia",
@@ -33,6 +37,10 @@
     }
   },
   "PICAFLOR": {
+    "VIDEO": {
+      "SHORT_TITLE": "Conocé el mundo de",
+      "BIG_TITLE": "EL PICAFLOR POLO"
+    },
     "MAP_SECTION": {
       "TITLE": "Location",
       "SUBTITLE": "Situated in Capilla del Señor, Buenos Aires, Argentina, just one hour away from downtown Buenos Aires.",
@@ -58,6 +66,10 @@
     }
   },
   "PATAGONIA": {
+    "VIDEO": {
+      "SHORT_TITLE": "Viví la experiencia",
+      "BIG_TITLE": "PATAGONIA POLO"
+    },
     "MAP_SECTION": {
       "TITLE": "Location",
       "SUBTITLE": "Arelauquen Golf & Country Club, situated in Bariloche, Río Negro, Patagonia Argentina, is surrounded by nature, national parks, glaciers, rivers, lakes, and mountains.",
@@ -72,6 +84,12 @@
     "CAROUSEL_PATAGONIA": {
       "TITLE": "Personalized experiences",
       "SUBTITLE": "We create unique and tailor-made trips, combining polo with gastronomy, hiking, trekking, kayaking, cycling, sailing and fishing, among others."
+    }
+  },
+  "BREEDING_TAMING_TRAINING": {
+    "VIDEO": {
+      "SHORT_TITLE": "Centro de",
+      "BIG_TITLE": "CRIA, DOMA Y HECHURA"
     }
   },
   "CONTACT_USER": {

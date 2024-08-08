@@ -1,17 +1,24 @@
-import Image from "next/image";
+import { useTranslations } from "next-intl";
 import React from "react";
 
+import VideoComponent from "@/app/components/VideoComponent";
 import { NAVBAR_ITEMS } from "@/app/constants";
-import Banner from "@/app/images/picaflor/Banner_picaflor.png";
+import VIDEO_PICAFLOR from "@/app/images/videos/WEB_picaflor.mov";
 
 import CarouselPicaflor from "./CarouselPicaflor";
 import MapPicaflor from "./MapPicaflor";
 import TournamentPicaflor from "./TournamentsPicaflor";
 
 const Picaflor: React.FC = () => {
+  const t = useTranslations("PICAFLOR.VIDEO");
+
   return (
     <div id={NAVBAR_ITEMS.PICAFLOR}>
-      <Image width="1440" src={Banner} alt="Picaflor" />
+      <VideoComponent
+        shortTitle={t("SHORT_TITLE")}
+        bigTitle={t("BIG_TITLE")}
+        videoSrc={VIDEO_PICAFLOR}
+      />
       <MapPicaflor />
       <TournamentPicaflor />
       <CarouselPicaflor />
