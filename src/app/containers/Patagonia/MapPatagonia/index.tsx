@@ -4,7 +4,7 @@ import React from "react";
 import Container from "@/app/components/Container";
 import MapView from "@/app/components/MapView";
 import HOUSE_MAP from "@/app/images/patagonia/Img_Donde_estamos_Alojamiento_Patagonia.png";
-import MAP_IMG from "@/app/images/patagonia/mapaPatagonia_curvas_mapa_Patagonia.svg";
+import MAP_IMG from "@/app/images/patagonia/Patagonia_mapa.svg";
 
 const MapPatagonia: React.FC = () => {
   const t = useTranslations("PATAGONIA.MAP_SECTION");
