@@ -4,7 +4,7 @@ import React from "react";
 import Container from "@/app/components/Container";
 import MapView from "@/app/components/MapView";
 import HOUSE_MAP from "@/app/images/picaflor/Img_Donde_estamos_Alojamiento_ElPicaflor.png";
-import MAP_IMG from "@/app/images/picaflor/Picaflor_mapaBsAs.svg";
+import MAP_IMG from "@/app/images/picaflor/Picaflor_mapa.svg";
 
 const MapPicaflor: React.FC = () => {
   const t = useTranslations("PICAFLOR.MAP_SECTION");
