@@ -1,0 +1,23 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.patagonia-polo.com"
+        },
+        {
+          "type": "host",
+          "value": "patagonia-polo.com"
+        },
+        {
+          "type": "host",
+          "value": "www.elpicaflorpolo.com"
+        }
+      ],
+      "destination": "https://elpicaflorpolo.com/:path*",
+      "permanent": true
+    }
+  ]
+}
