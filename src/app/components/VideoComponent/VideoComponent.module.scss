@@ -2,6 +2,8 @@
 
 .container {
   position: relative;
+  max-height: 108vh;
+  overflow: hidden;
 
   video {
     width: 100%;
@@ -11,7 +13,7 @@
 .titleContainer {
   position: absolute;
   left: $space-left;
-  top: 45vh;
+  top: 42vh;
   width: 28rem;
   color: $primary_color_light;
   display: flex;
