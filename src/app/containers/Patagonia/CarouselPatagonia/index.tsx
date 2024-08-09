@@ -16,7 +16,7 @@ const imageImports = [
   "Patagonia_Carrusel5_Evento.png",
   "Patagonia_Carrusel6_Pesca.png",
   "Patagonia_Carrusel7_Arte.png",
-  "Patagonia_Carrusel8_Cabalgata.png",
+  "Patagonia_Carrusel0_Cabalgata.png",
 ];
 
 const images = imageImports.map((src, index) => ({
