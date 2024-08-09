@@ -28,20 +28,6 @@ const Navbar: React.FC = () => {
 
   return (
     <Container className={navbarStyles}>
-      <div className={styles.languagesContainer}>
-        {Object.entries(LANGUAGES).map(([key, lang]) => (
-          <Link
-            className={styles.language}
-            href={`/${lang}`}
-            key={key}
-            style={{
-              fontWeight: currentLang === lang ? 700 : 500,
-            }}
-          >
-            {lang.toLocaleUpperCase()}
-          </Link>
-        ))}
-      </div>
       <div className={styles.contentContainer}>
         <div className={styles.logosContainer}>
           <Image width={100} src={PicaflorLogo} alt="PicaflorLogo" />
@@ -56,6 +42,20 @@ const Navbar: React.FC = () => {
               data-last={index === array.length - 1}
             >
               {t(key).toLocaleUpperCase()}
+            </Link>
+          ))}
+        </div>
+        <div className={styles.languagesContainer}>
+          {Object.entries(LANGUAGES).map(([key, lang]) => (
+            <Link
+              className={cs(
+                styles.language,
+                currentLang === lang && styles.languageSelected
+              )}
+              href={`/${lang}`}
+              key={key}
+            >
+              {lang.toLocaleUpperCase()}
             </Link>
           ))}
         </div>
