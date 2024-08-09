@@ -1,6 +1,6 @@
 export const LANGUAGES = {
-  ES: "es",
   EN: "en",
+  ES: "es",
 };
 
 export const NAVBAR_ITEMS = {
