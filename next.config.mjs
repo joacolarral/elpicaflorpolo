@@ -7,6 +7,6 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {};
 
 // Combinamos los plugins
-const configWithPlugins = withVideos(withNextIntl(nextConfig));
+const configWithPlugins = withNextIntl({ ...nextConfig, ...withVideos() });
 
 export default configWithPlugins;
