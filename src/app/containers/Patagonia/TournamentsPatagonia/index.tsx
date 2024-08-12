@@ -9,7 +9,6 @@ import TOURNAMENT_PATAGONIA from "@/app/images/patagonia/Img_Torneos_Patagonia.p
 const TournamentPatagonia: React.FC = () => {
   const t = useTranslations("PATAGONIA.TOURNAMENT_SECTION");
 
-  const handleSubmit = () => {};
   return (
     <TournamentView
       title={t("TITLE")}
@@ -17,7 +16,7 @@ const TournamentPatagonia: React.FC = () => {
       buttonLabel={t("BUTTON_LABEL")}
       inputPlaceHolder={t("INPUT_PLACEHOLDER")}
       imgTournamentSrc={TOURNAMENT_PATAGONIA}
-      handleSubmit={handleSubmit}
+      mailFrom="Torneos Patagonia"
     />
   );
 };

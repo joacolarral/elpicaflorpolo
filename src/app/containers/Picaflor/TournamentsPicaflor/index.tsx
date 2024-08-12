@@ -9,7 +9,6 @@ import TOURNAMENT_PICAFLOR from "@/app/images/picaflor/Img_Torneos_El_Picaflor.p
 const TournamentPicaflor: React.FC = () => {
   const t = useTranslations("PICAFLOR.TOURNAMENT_SECTION");
 
-  const handleSubmit = () => {};
   return (
     <TournamentView
       title={t("TITLE")}
@@ -17,7 +16,7 @@ const TournamentPicaflor: React.FC = () => {
       buttonLabel={t("BUTTON_LABEL")}
       inputPlaceHolder={t("INPUT_PLACEHOLDER")}
       imgTournamentSrc={TOURNAMENT_PICAFLOR}
-      handleSubmit={handleSubmit}
+      mailFrom="Torneos Picaflor"
     />
   );
 };

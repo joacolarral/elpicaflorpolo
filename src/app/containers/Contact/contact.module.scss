@@ -61,6 +61,15 @@
     }
   }
 
+  .inputColorRed {
+    color: red !important;
+
+    &::placeholder {
+      color: red;
+      opacity: 1;
+    }
+  }
+
   input[type="text"] {
     border-bottom: 1px solid $secondary_color_light;
   }
@@ -102,7 +111,7 @@
   background: url("../../images/contact/Img_fondo_zocalo_PaisajePolo.png");
   background-size: cover;
   background-position: center;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -127,7 +136,7 @@
 
   input {
     font-size: 1.1rem;
-    margin: 1rem 2rem 1rem 0;
+    margin: 1rem 2rem 0rem 0;
     font-family: "Montserrat";
     width: 40%;
     font-weight: 400;
