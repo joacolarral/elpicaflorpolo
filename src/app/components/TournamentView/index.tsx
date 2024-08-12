@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import Button from "@/app/components/Button";
 import Container from "@/app/components/Container";
 import TitleAndSubtitle from "@/app/components/TitleAndSubtitle";
+import { validateEmail } from "@/app/utils";
 
 import styles from "./TournamentView.module.scss";
 
@@ -16,7 +17,7 @@ interface TournamentViewProps {
   inputPlaceHolder: string;
   buttonLabel: string;
   imgTournamentSrc: StaticImageData;
-  handleSubmit: () => void;
+  mailFrom: string;
 }
 
 const TournamentView: React.FC<TournamentViewProps> = ({
@@ -25,7 +26,7 @@ const TournamentView: React.FC<TournamentViewProps> = ({
   inputPlaceHolder,
   buttonLabel,
   imgTournamentSrc,
-  handleSubmit,
+  mailFrom,
 }) => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
@@ -34,10 +35,18 @@ const TournamentView: React.FC<TournamentViewProps> = ({
     setEmail(event.target.value);
   };
 
-  const validateEmail = (email: string) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-  };
+  const sendRegistrationEmail = async () =>
+    await fetch("/api/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        mailFrom: `${mailFrom} <torneos@elpicaflorpolo.com>`,
+        subject: `Inscripción Torneo`,
+      }),
+    });
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -46,7 +55,7 @@ const TournamentView: React.FC<TournamentViewProps> = ({
     } else {
       setEmail("");
       setError("");
-      handleSubmit();
+      sendRegistrationEmail();
     }
   };
 
