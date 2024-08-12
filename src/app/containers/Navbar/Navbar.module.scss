@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/devices.scss";
 
 .container {
   background: rgba(33, 39, 54, 0.85);
@@ -51,6 +52,12 @@
 .logosContainer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.containerBrands {
+  display: flex;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -88,5 +95,80 @@
 
   &:hover {
     font-weight: 700;
+  }
+}
+
+.menuIcon {
+  display: none;
+  padding: 1rem;
+}
+
+// MOBILE
+@include mobile {
+  .container {
+    justify-content: flex-start;
+  }
+
+  .containerBrands {
+    gap: 1rem;
+  }
+
+  .fixedNavbar {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    transition: top 0.3s ease, bottom 0.3s ease;
+    overflow: hidden;
+    max-height: 100px;
+    transition: max-height 0.3s ease;
+  }
+
+  .openMenuMobile {
+    max-height: 100vh;
+    height: 100vh;
+  }
+
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3rem;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+
+  .navbarItemsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .languagesContainer {
+    justify-content: flex-start;
+  }
+
+  .navItem {
+    position: static;
+    width: 100%;
+    text-align: left;
+    padding: 2.2rem 0;
+    border-bottom: 1px solid $primary_color_light;
+    text-decoration: none;
+    color: $primary_color_light;
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      font-weight: 700;
+    }
+  }
+
+  .languagesContainer {
+    margin-top: 1rem;
   }
 }
