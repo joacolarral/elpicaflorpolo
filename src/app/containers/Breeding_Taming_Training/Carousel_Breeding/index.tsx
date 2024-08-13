@@ -2,6 +2,7 @@
 
 import classNames from "classnames";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import React, { memo, useState } from "react";
 import { Swiper as SwiperType } from "swiper/types";
 
@@ -30,7 +31,7 @@ interface Slide {
   value: React.ReactNode;
 }
 
-const createSlides = (activeIndex: number): Slide[] => {
+const createSlides = (t: any, activeIndex: number): Slide[] => {
   const imageSlides = images.map((image, index) => ({
     id: index + 1,
     value: (
@@ -39,13 +40,7 @@ const createSlides = (activeIndex: number): Slide[] => {
           [styles.inactiveImage]: index > activeIndex,
         })}
       >
-        {index === 0 && (
-          <p>
-            Nos dedicamos a la cría de caballos de polo de alta calidad.
-            Nuestros caballos reciben el mejor cuidado y entrenamiento para
-            garantizar un rendimiento óptimo.
-          </p>
-        )}
+        {index === 0 && <p>{t("IMG_P")}</p>}
         <Image src={image.src} alt={image.alt} />
       </div>
     ),
@@ -56,9 +51,10 @@ const createSlides = (activeIndex: number): Slide[] => {
 
 const CarouselBreedingTamingTraining: React.FC = () => {
   const isMobile = useIsMobile();
+  const t = useTranslations("BREEDING_TAMING_TRAINING.CAROUSEL");
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const slides = createSlides(activeIndex);
+  const slides = createSlides(t, activeIndex);
 
   const activeImgs = (swiper: SwiperType) => {
     if (swiper.isBeginning) return setActiveIndex(0);
