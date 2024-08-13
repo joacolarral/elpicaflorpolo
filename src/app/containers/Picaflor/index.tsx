@@ -5,6 +5,8 @@ import React from "react";
 
 import VideoComponent from "@/app/components/VideoComponent";
 import { NAVBAR_ITEMS } from "@/app/constants";
+import useIsMobile from "@/app/hooks/useIsMobile";
+import MOBILE_VIDEO_PICAFLOR from "@/app/images/videos/celular_picaflor.mov";
 import VIDEO_PICAFLOR from "@/app/images/videos/WEB_picaflor.mov";
 
 import CarouselPicaflor from "./CarouselPicaflor";
@@ -12,6 +14,8 @@ import MapPicaflor from "./MapPicaflor";
 import TournamentPicaflor from "./TournamentsPicaflor";
 
 const Picaflor: React.FC = () => {
+  const isMobile = useIsMobile();
+
   const t = useTranslations("PICAFLOR.VIDEO");
 
   return (
@@ -19,7 +23,7 @@ const Picaflor: React.FC = () => {
       <VideoComponent
         shortTitle={t("SHORT_TITLE")}
         bigTitle={t("BIG_TITLE")}
-        videoSrc={VIDEO_PICAFLOR}
+        videoSrc={isMobile ? MOBILE_VIDEO_PICAFLOR : VIDEO_PICAFLOR}
       />
       <MapPicaflor />
       <TournamentPicaflor />

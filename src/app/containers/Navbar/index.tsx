@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 
 import Container from "@/app/components/Container";
 import useIsMobile from "@/app/hooks/useIsMobile";
@@ -22,13 +22,8 @@ import styles from "./Navbar.module.scss";
 const Navbar: React.FC = () => {
   const isMobile = useIsMobile();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
   const t = useTranslations("NAVBAR");
   const pathname = usePathname();
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   const handleOpenMenu = () => {
     setMenuOpen(!menuOpen);
@@ -47,10 +42,6 @@ const Navbar: React.FC = () => {
     styles.fixedNavbar,
     menuOpen && styles.openMenuMobile
   );
-
-  if (!isMounted) {
-    return null; // No renderiza nada hasta que el componente esté montado
-  }
 
   return (
     <Container className={navbarStyles}>
