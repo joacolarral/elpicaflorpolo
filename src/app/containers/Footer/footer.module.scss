@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/devices.scss";
 
 .container {
   display: grid;
@@ -69,5 +70,62 @@
   p {
     font-size: 0.8rem;
     font-weight: 600;
+  }
+}
+
+@include mobile {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: $container-space-around-mobile;
+    gap: 3rem;
+  }
+
+  .sectionBrandsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sectionBrandSectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+    border-bottom: 1px solid white;
+    padding-bottom: 2rem;
+  }
+
+  .socialMediaContainer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .socialMediaWithoutText {
+    justify-content: space-between;
+  }
+
+  .linksText {
+    p {
+      width: 100%;
+    }
+  }
+
+  .horizontalLine {
+    display: none;
+  }
+
+  .whatsapp {
+    a {
+      flex-direction: row;
+      gap: 2rem;
+    }
+    p {
+      font-weight: 600;
+      font-size: 1rem !important;
+      letter-spacing: 2px;
+    }
   }
 }

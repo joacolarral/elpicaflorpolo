@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/devices.scss";
 
 .container {
   padding: $container-space-around;
@@ -10,4 +11,14 @@
 
 .backgroundColorAlternative {
   background-color: $background_light_secondary;
+}
+
+@include mobile {
+  .container {
+    padding: $container-space-around-mobile;
+  }
+
+  .spaceVerticalAndLeft {
+    padding: $container-space-vertical-left-mobile;
+  }
 }
