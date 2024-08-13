@@ -1,9 +1,10 @@
 @import "../../styles/variables.scss";
+@import "../../styles/devices.scss";
 
 // CAROUSEL PICAFLOR
 
 .carouselPicaflorContainer {
-  padding: 8rem 0;
+  padding: 7rem 0;
 }
 
 .containerContentHeaderCarousel {
@@ -30,4 +31,17 @@
 
 .inactiveImage {
   filter: grayscale(100%);
+}
+
+@include mobile {
+  .carouselPicaflorContainer {
+    padding: 4rem 0;
+  }
+
+  .containerImageCarousel p {
+    line-height: 1.8rem;
+    margin: 0 2.5rem;
+    top: 3.5rem;
+    width: 20rem;
+  }
 }

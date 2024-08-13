@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import React, { memo } from "react";
+import React, { memo, useMemo } from "react";
 
 import Carousel from "@/app/components/Carousel";
 import Container from "@/app/components/Container";
 import TitleAndSubtitle from "@/app/components/TitleAndSubtitle";
+import useIsMobile from "@/app/hooks/useIsMobile";
 
 import styles from "../picaflor.module.scss";
 
@@ -29,7 +30,7 @@ interface Slide {
   value: React.ReactNode;
 }
 
-const createSlides = (t: any): Slide[] => {
+const createSlides = (t: any, isMobile: boolean): Slide[] => {
   const headerSlide = {
     id: 1,
     value: (
@@ -43,31 +44,37 @@ const createSlides = (t: any): Slide[] => {
     id: index + 2,
     value: (
       <div className={styles.containerImageCarousel}>
-        <h3>{t(`PICTURE_${index + 1}`)}</h3>
-        <Image layout="responsive" src={image.src} alt={image.alt} />
+        <Image src={image.src} alt={image.alt} />
       </div>
     ),
   }));
-
-  return [headerSlide, ...imageSlides];
+  return isMobile ? imageSlides : [headerSlide, ...imageSlides];
 };
 
 const CarouselPicaflor: React.FC = () => {
   const t = useTranslations("PICAFLOR.CAROUSEL_PICAFLOR");
-  const slides = createSlides(t);
+  const isMobile = useIsMobile();
+  const slides = useMemo(() => createSlides(t, isMobile), [isMobile, t]);
 
   return (
     <Container className={styles.carouselPicaflorContainer} alternativeBg>
+      {isMobile && (
+        <div className={styles.containerContentHeaderCarousel}>
+          <TitleAndSubtitle title={t("TITLE")} subtitle={t("SUBTITLE")} />
+        </div>
+      )}
       <Carousel
         slides={slides}
         slidesPerView={2}
-        spaceBetween={30}
+        spaceBetween={isMobile ? 8 : 30}
         centeredSlides
         centeredSlidesBounds
         slideToClickedSlide
+        slidesOffsetBefore={isMobile ? 24 : 0}
+        slidesOffsetAfter={isMobile ? 200 : 0}
         normalizeSlideIndex={false}
         freeMode
-        width={1350}
+        width={isMobile ? 600 : 1350}
       />
     </Container>
   );

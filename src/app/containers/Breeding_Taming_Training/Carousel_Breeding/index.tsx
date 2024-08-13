@@ -6,6 +6,7 @@ import React, { memo, useState } from "react";
 
 import Carousel from "@/app/components/Carousel";
 import Container from "@/app/components/Container";
+import useIsMobile from "@/app/hooks/useIsMobile";
 
 import styles from "../breeding.module.scss";
 
@@ -30,7 +31,7 @@ interface Slide {
 
 const createSlides = (activeIndex: number): Slide[] => {
   const imageSlides = images.map((image, index) => ({
-    id: index + 2,
+    id: index + 1,
     value: (
       <div
         className={classNames(styles.containerImageCarousel, {
@@ -44,7 +45,7 @@ const createSlides = (activeIndex: number): Slide[] => {
             garantizar un rendimiento óptimo.
           </p>
         )}
-        <Image layout="responsive" src={image.src} alt={image.alt} />
+        <Image src={image.src} alt={image.alt} />
       </div>
     ),
   }));
@@ -53,9 +54,17 @@ const createSlides = (activeIndex: number): Slide[] => {
 };
 
 const CarouselBreedingTamingTraining: React.FC = () => {
+  const isMobile = useIsMobile();
   const [activeIndex, setActiveIndex] = useState(0);
 
   const slides = createSlides(activeIndex);
+
+  const activeImgs = (swiper) => {
+    console.log("[swiper]", swiper);
+    if (swiper.isBeginning) return setActiveIndex(0);
+    if (swiper.isEnd) return setActiveIndex(slides.length);
+    setActiveIndex(swiper.activeIndex);
+  };
 
   return (
     <Container className={styles.carouselPicaflorContainer} alternativeBg>
@@ -63,14 +72,13 @@ const CarouselBreedingTamingTraining: React.FC = () => {
         slides={slides}
         slidesPerView={2}
         spaceBetween={30}
-        centeredSlides
-        centeredSlidesBounds
         slideToClickedSlide
         normalizeSlideIndex={false}
-        width={1100}
-        slidesOffsetBefore={80}
+        width={isMobile ? 1000 : 1150}
+        slidesOffsetBefore={isMobile ? 40 : 80}
+        slidesOffsetAfter={isMobile ? 600 : -200}
         freeMode
-        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+        onScroll={(swiper) => activeImgs(swiper)}
       />
     </Container>
   );
