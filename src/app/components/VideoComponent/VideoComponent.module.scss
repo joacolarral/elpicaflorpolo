@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/devices.scss";
 
 .container {
   position: relative;
@@ -10,11 +11,19 @@
   }
 }
 
+.template {
+  background-image: url("../../images/banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
 .titleContainer {
   position: absolute;
   left: $space-left;
   top: 42vh;
-  width: 32rem;
+  max-width: 32rem;
   color: $primary_color_light;
   display: flex;
   flex-direction: column;
@@ -25,5 +34,17 @@
   }
   h1 {
     text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+@include mobile {
+  .titleContainer {
+    left: $space-left-mobile;
+    max-width: 18rem;
+  }
+  .container {
+    video {
+      height: 100vh;
+      object-fit: cover;
+    }
   }
 }

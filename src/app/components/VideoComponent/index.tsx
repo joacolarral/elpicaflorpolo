@@ -1,7 +1,5 @@
-import Image from "next/image";
+import classNames from "classnames";
 import React from "react";
-
-import Banner from "@/app/images/breeding_taming_training/Banner_breeding.png";
 
 import styles from "./VideoComponent.module.scss";
 
@@ -18,22 +16,17 @@ const VideoComponent: React.FC<VideoComponentProps> = ({
   videoSrc,
   template,
 }) => {
+  const containerStyles = classNames(
+    styles.container,
+    template && styles.template
+  );
   return (
-    <div className={styles.container}>
+    <div className={containerStyles}>
       <div className={styles.titleContainer}>
         <p>{shortTitle}</p>
         <h1>{bigTitle}</h1>
       </div>
-      {template ? (
-        <Image
-          width="1440"
-          layout="responsive"
-          src={Banner}
-          alt="Breeding Taming Trainig"
-        />
-      ) : (
-        <video src={videoSrc} autoPlay muted loop />
-      )}
+      {!template && <video src={videoSrc} autoPlay muted loop />}
     </div>
   );
 };
