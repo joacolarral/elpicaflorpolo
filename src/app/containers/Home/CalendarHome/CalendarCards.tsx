@@ -4,13 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
-import React, {
-  Dispatch,
-  SetStateAction,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import React, { Dispatch, SetStateAction, useMemo } from "react";
 
 import Button from "@/app/components/Button";
 import Carousel from "@/app/components/Carousel";
@@ -45,7 +39,6 @@ const CalendarCards: React.FC<CalendarCardsProps> = ({
   setHoveredCard,
   hoveredCard,
 }) => {
-  const [isMounted, setIsMounted] = useState(false);
   const isMobile = useIsMobile();
   const pathname = usePathname();
   const calendarHomeT = useTranslations("HOME.CALENDAR_SECTION");
@@ -77,10 +70,6 @@ const CalendarCards: React.FC<CalendarCardsProps> = ({
     },
   ];
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
   const isHovered = (seasonCard: SeasonType) => seasonCard === hoveredCard;
 
   const slides: Slide[] = cards.map((card, index) => ({
@@ -94,10 +83,6 @@ const CalendarCards: React.FC<CalendarCardsProps> = ({
       </Link>
     ),
   }));
-
-  if (!isMounted) {
-    return null;
-  }
 
   return (
     <div className={styles.calendarCardsContainer}>

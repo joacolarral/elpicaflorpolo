@@ -1,0 +1,46 @@
+@import "../../styles/variables.scss";
+@import "../../styles/devices.scss";
+
+#wing1,
+#wing2,
+#wing3 {
+  transform-origin: center bottom; /* Ajustá según el diseño del ala */
+  animation: flap 0.5s ease-in-out infinite alternate;
+}
+
+#picaflor_loading {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  background-color: $secondary_color_light;
+
+  svg {
+    position: relative;
+    width: 450px;
+    top: 17vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  path {
+    fill: white;
+  }
+}
+
+@keyframes flap {
+  0% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
+
+@include mobile {
+  #picaflor_loading {
+    svg {
+      top: 30vh;
+      width: 300px;
+    }
+  }
+}

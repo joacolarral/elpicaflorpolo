@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 
 import Container from "@/app/components/Container";
 import TitleAndSubtitle from "@/app/components/TitleAndSubtitle";
@@ -19,11 +19,6 @@ import CalendarCards from "./CalendarCards";
 const CalendarHome: React.FC = () => {
   const t = useTranslations("HOME.CALENDAR_SECTION");
   const [hoveredCard, setHoveredCard] = useState<SeasonType>(SEASON.AUTUMN);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   const imageSrc = useMemo(() => {
     const imageHovered = {
@@ -33,10 +28,6 @@ const CalendarHome: React.FC = () => {
     };
     return imageHovered[hoveredCard];
   }, [hoveredCard]);
-
-  if (!isMounted) {
-    return null;
-  }
 
   return (
     <Container className={styles.calendarHomeContainer} noPaddingRight>
