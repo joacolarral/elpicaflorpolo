@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/devices.scss";
 
 // CONTACT USER
 
@@ -107,7 +108,7 @@
 // CONTACT BRAND
 
 .contactBrandContainer {
-  height: 65vh;
+  min-height: 65vh;
   background: url("../../images/contact/Img_fondo_zocalo_PaisajePolo.png");
   background-size: cover;
   background-position: center;
@@ -123,7 +124,7 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 0 10rem;
-  gap: 2rem;
+  gap: 3rem;
   div {
     padding: 0 2rem;
   }
@@ -174,4 +175,37 @@
   color: red;
   font-size: 0.875rem;
   height: 32px;
+}
+
+@include mobile {
+  .contactUserContainer {
+    img {
+      display: none;
+    }
+  }
+
+  .contactBrandContainerBrands {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    div {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
+
+    img {
+      width: 80%;
+    }
+  }
+
+  .contactBrandContentContainer {
+    padding: 5rem 0 0rem;
+    input {
+      width: 100%;
+      margin: 1rem 0 3rem 0;
+    }
+  }
 }

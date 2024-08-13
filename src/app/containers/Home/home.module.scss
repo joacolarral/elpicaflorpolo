@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/devices.scss";
 
 // CALENDAR HOME STYLES
 .calendarHomeContainer {
@@ -76,4 +77,34 @@
   align-items: center;
   justify-content: center;
   gap: 5rem;
+}
+
+@include mobile {
+  .pictureContainer {
+    display: none;
+  }
+  .carouselTextContainer {
+    left: $space-left-mobile;
+    top: 1rem;
+    max-width: 350px;
+  }
+
+  // EXPERIENCES HOME
+
+  .experiencesCardHomeContainer {
+    gap: 2rem;
+    padding: 4rem 0;
+    h2 {
+      padding-left: $space-left-mobile;
+    }
+  }
+  .cardsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .cardContainer {
+    height: 470px;
+  }
 }

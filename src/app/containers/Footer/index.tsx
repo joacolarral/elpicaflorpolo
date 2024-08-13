@@ -58,7 +58,7 @@ const Footer = () => {
             mapText="Capilla del Señor, Provincia de Buenos Aires, Argentina"
           />
         </div>
-        <div className={styles.sectionBrandSectionContainer}>
+        <div>
           <div className={styles.horizontalLine} />
         </div>
         <div className={styles.sectionBrandSectionContainer}>

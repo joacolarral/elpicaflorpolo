@@ -4,8 +4,10 @@ import { useTranslations } from "next-intl";
 import React, { Dispatch, SetStateAction } from "react";
 
 import Button from "@/app/components/Button";
+import Carousel from "@/app/components/Carousel";
 import { NAVBAR_ITEMS, SEASON } from "@/app/constants";
 import styles from "@/app/containers/Home/home.module.scss";
+import useIsMobile from "@/app/hooks/useIsMobile";
 import Autumn from "@/app/images/home/Temporada_otoño.png";
 import AutumnHover from "@/app/images/home/Temporada_otoño_hover.png";
 import Spring from "@/app/images/home/Temporada_primavera.png";
@@ -19,10 +21,16 @@ interface CalendarCardsProps {
   hoveredCard: string;
 }
 
+interface Slide {
+  id: number;
+  value: React.ReactNode;
+}
+
 const CalendarCards: React.FC<CalendarCardsProps> = ({
   setHoveredCard,
   hoveredCard,
 }) => {
+  const isMobile = useIsMobile();
   const calendarHomeT = useTranslations("HOME.CALENDAR_SECTION");
   const cards = [
     {
@@ -47,26 +55,64 @@ const CalendarCards: React.FC<CalendarCardsProps> = ({
 
   const isHovered = (seasonCard: SeasonType) => seasonCard === hoveredCard;
 
+  const slides: Slide[] = cards.map((card, index) => ({
+    id: index + 1,
+    value: (
+      <Link key={card.season} href={`#${card.linkTo}`}>
+        <div
+          className={styles.calendarCard}
+          onMouseEnter={() => setHoveredCard(card.season)}
+        >
+          <Image
+            width={248}
+            height={400}
+            src={card.hoverImage}
+            alt={card.season}
+          />
+          <Button disabled={!isHovered(card.season)} isSecondaryButton>
+            {calendarHomeT("BUTTON")}
+          </Button>
+        </div>
+      </Link>
+    ),
+  }));
+
   return (
     <div className={styles.calendarCardsContainer}>
-      {cards.map((card) => (
-        <Link key={card.season} href={`#${card.linkTo}`}>
-          <div
-            className={styles.calendarCard}
-            onMouseEnter={() => setHoveredCard(card.season)}
-          >
-            <Image
-              width={248}
-              height={400}
-              src={isHovered(card.season) ? card.hoverImage : card.defaultImage}
-              alt={card.season}
-            />
-            <Button disabled={!isHovered(card.season)} isSecondaryButton>
-              {calendarHomeT("BUTTON")}
-            </Button>
-          </div>
-        </Link>
-      ))}
+      {/* {isMobile ? (
+        <Carousel
+          slides={slides}
+          slidesPerView={2}
+          spaceBetween={30}
+          centeredSlides
+          centeredSlidesBounds
+          slideToClickedSlide
+          normalizeSlideIndex={false}
+          freeMode
+          width={500}
+        />
+      ) : (
+        cards.map((card) => (
+          <Link key={card.season} href={`#${card.linkTo}`}>
+            <div
+              className={styles.calendarCard}
+              onMouseEnter={() => setHoveredCard(card.season)}
+            >
+              <Image
+                width={248}
+                height={400}
+                src={
+                  isHovered(card.season) ? card.hoverImage : card.defaultImage
+                }
+                alt={card.season}
+              />
+              <Button disabled={!isHovered(card.season)} isSecondaryButton>
+                {calendarHomeT("BUTTON")}
+              </Button>
+            </div>
+          </Link>
+        ))
+      )} */}
     </div>
   );
 };
