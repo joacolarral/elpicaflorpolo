@@ -3,6 +3,7 @@
 import classNames from "classnames";
 import Image from "next/image";
 import React, { memo, useState } from "react";
+import { Swiper as SwiperType } from "swiper/types";
 
 import Carousel from "@/app/components/Carousel";
 import Container from "@/app/components/Container";
@@ -59,8 +60,7 @@ const CarouselBreedingTamingTraining: React.FC = () => {
 
   const slides = createSlides(activeIndex);
 
-  const activeImgs = (swiper) => {
-    console.log("[swiper]", swiper);
+  const activeImgs = (swiper: SwiperType) => {
     if (swiper.isBeginning) return setActiveIndex(0);
     if (swiper.isEnd) return setActiveIndex(slides.length);
     setActiveIndex(swiper.activeIndex);
