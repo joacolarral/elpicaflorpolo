@@ -8,8 +8,8 @@
   },
   "HOME": {
     "VIDEO": {
-      "SHORT_TITLE": "Experimentá el",
-      "BIG_TITLE": "POLO EN LA ARGENTINA"
+      "SHORT_TITLE": "Experimentá el ",
+      "BIG_TITLE": "POLO EN ARGENTINA"
     },
     "CALENDAR_SECTION": {
       "TITLE": "UN CAMINO PARA RECORRER",
@@ -21,7 +21,7 @@
       "SUBTITLE": "El polo es más que el partido, es una experiencia que combina deporte, naturaleza y encuentro."
     },
     "EXPERIENCES_CARD_HOME": {
-      "TITLE": "TRES PROPUESTAS EXCLUSIVAS:",
+      "TITLE": "TRES PROPUESTAS EXCLUSIVAS",
       "CARD_1": {
         "TITLE": "Día de polo",
         "DESCRIPTION": "Día completo de introducción al polo\nTour por el club\n1 práctica de polo\nAsado"
@@ -54,15 +54,7 @@
     },
     "CAROUSEL_PICAFLOR": {
       "TITLE": "EVENTOS Y ACTIVIDADES",
-      "SUBTITLE": "Diseñamos experiencias únicas que combinan polo con gastronomía, campo, turismo y alojamiento.",
-      "PICTURE_1": "Alojamiento",
-      "PICTURE_2": "",
-      "PICTURE_3": "Eventos",
-      "PICTURE_4": "",
-      "PICTURE_5": "Gastronomía",
-      "PICTURE_6": "",
-      "PICTURE_7": "Entrenamiento",
-      "PICTURE_8": ""
+      "SUBTITLE": "Diseñamos experiencias únicas que combinan polo con gastronomía, campo, turismo y alojamiento."
     }
   },
   "PATAGONIA": {
@@ -90,11 +82,14 @@
     "VIDEO": {
       "SHORT_TITLE": "Centro de",
       "BIG_TITLE": "CRIA, DOMA Y HECHURA"
+    },
+    "CAROUSEL": {
+      "IMG_P": "Nos dedicamos a la cría de caballos de polo de alta calidad. Nuestros caballos reciben el mejor cuidado y entrenamiento para garantizar un rendimiento óptimo."
     }
   },
   "CONTACT_USER": {
     "TITLE": "CONTACTATE",
-    "SUBTITLE": "Llená el formulario y nos pondremos en contacto",
+    "SUBTITLE": "Llená el formulario y nos pondremos en contacto.",
     "INPUT_FULLNAME": "Nombre y apellido",
     "INPUT_MAIL": "Mail de contacto",
     "INPUT_TEXTBOX": "Mensaje",

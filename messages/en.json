@@ -8,8 +8,8 @@
   },
   "HOME": {
     "VIDEO": {
-      "SHORT_TITLE": "Experimentá el",
-      "BIG_TITLE": "POLO EN LA ARGENTINA"
+      "SHORT_TITLE": "Experience",
+      "BIG_TITLE": "POLO IN ARGENTINA"
     },
     "CALENDAR_SECTION": {
       "TITLE": "A path to explore",
@@ -17,8 +17,8 @@
       "BUTTON": "Discover it"
     },
     "CAROUSEL_HOME": {
-      "TITLE": "Experience Polo in Argentina",
-      "SUBTITLE": "El polo es más que el partido, es una experiencia que combina deporte, naturaleza y encuentro."
+      "TITLE": "The Experience",
+      "SUBTITLE": "Polo is more than just a game, it is an experience that combines sport, nature and encounter."
     },
     "EXPERIENCES_CARD_HOME": {
       "TITLE": "Three exclusive proposals",
@@ -38,7 +38,7 @@
   },
   "PICAFLOR": {
     "VIDEO": {
-      "SHORT_TITLE": "Conocé el mundo de",
+      "SHORT_TITLE": "Discover the world of",
       "BIG_TITLE": "EL PICAFLOR POLO"
     },
     "MAP_SECTION": {
@@ -54,20 +54,12 @@
     },
     "CAROUSEL_PICAFLOR": {
       "TITLE": "Events and activities",
-      "SUBTITLE": "We design unique experiences that combine polo with gastronomy, countryside, tourism, and lodging.",
-      "PICTURE_1": "Accommodation",
-      "PICTURE_2": "",
-      "PICTURE_3": "Events",
-      "PICTURE_4": "",
-      "PICTURE_5": "Gastronomy",
-      "PICTURE_6": "",
-      "PICTURE_7": "Training",
-      "PICTURE_8": ""
+      "SUBTITLE": "We design unique experiences that combine polo with gastronomy, countryside, tourism, and lodging."
     }
   },
   "PATAGONIA": {
     "VIDEO": {
-      "SHORT_TITLE": "Viví la experiencia",
+      "SHORT_TITLE": "Enjoy the experience",
       "BIG_TITLE": "PATAGONIA POLO"
     },
     "MAP_SECTION": {
@@ -88,20 +80,23 @@
   },
   "BREEDING_TAMING_TRAINING": {
     "VIDEO": {
-      "SHORT_TITLE": "Centro de",
-      "BIG_TITLE": "CRIA, DOMA Y HECHURA"
+      "SHORT_TITLE": "Polo horses ",
+      "BIG_TITLE": "BREEDING AND TRAINING"
+    },
+    "CAROUSEL": {
+      "IMG_P": "We are dedicated to the breeding of high-quality polo horses. Our horses receive the best care and training to guarantee optimum performance."
     }
   },
   "CONTACT_USER": {
     "TITLE": "Contact us",
-    "SUBTITLE": "Fill out the form and we will contact you as soon as possible",
+    "SUBTITLE": "Fill out the form and we will contact you as soon as possible.",
     "INPUT_FULLNAME": "Name and surname",
     "INPUT_MAIL": "Contact email",
     "INPUT_TEXTBOX": "Message",
     "BUTTON_LABEL": "Send"
   },
   "CONTACT_BRAND": {
-    "INPUT_LABEL": "Convertite en sponsor",
+    "INPUT_LABEL": "Partner with us",
     "INPUT_MAIL": "Contact email",
     "BUTTON_LABEL": "Send"
   }
