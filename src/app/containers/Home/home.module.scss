@@ -98,6 +98,13 @@
       padding-left: $space-left-mobile;
     }
   }
+
+  .calendarCardsContainer {
+    display: block;
+    overflow: hidden;
+    max-width: 400px;
+  }
+
   .cardsContainer {
     display: flex;
     align-items: center;
@@ -106,5 +113,15 @@
   }
   .cardContainer {
     height: 470px;
+  }
+
+  .calendarCard {
+    transition: none;
+    position: relative;
+    z-index: 0;
+    &:hover {
+      transform: none;
+      z-index: 1;
+    }
   }
 }

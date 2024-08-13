@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Card from "@/app/components/Card";
 import Carousel from "@/app/components/Carousel";
@@ -14,12 +14,21 @@ import Card_2 from "@/app/images/home/cards/Home_tarjeta_SemanaPolo.png";
 
 const ExperiencesCardHome: React.FC = () => {
   const isMobile = useIsMobile();
+  const [isMounted, setIsMounted] = useState(false);
   const experiencesCardHomeT = useTranslations("HOME.EXPERIENCES_CARD_HOME");
   const cardsExperience = [Card_1, Card_2, Card_3];
 
   interface Slide {
     id: number;
     value: React.ReactNode;
+  }
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
   }
 
   const slides: Slide[] = cardsExperience.map((cardImage, index) => ({

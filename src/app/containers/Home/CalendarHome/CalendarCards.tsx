@@ -1,7 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import React, { Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 import Button from "@/app/components/Button";
 import Carousel from "@/app/components/Carousel";
@@ -30,6 +32,7 @@ const CalendarCards: React.FC<CalendarCardsProps> = ({
   setHoveredCard,
   hoveredCard,
 }) => {
+  const [isMounted, setIsMounted] = useState(false);
   const isMobile = useIsMobile();
   const calendarHomeT = useTranslations("HOME.CALENDAR_SECTION");
   const cards = [
@@ -53,43 +56,41 @@ const CalendarCards: React.FC<CalendarCardsProps> = ({
     },
   ];
 
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const isHovered = (seasonCard: SeasonType) => seasonCard === hoveredCard;
 
   const slides: Slide[] = cards.map((card, index) => ({
     id: index + 1,
     value: (
-      <Link key={card.season} href={`#${card.linkTo}`}>
-        <div
-          className={styles.calendarCard}
-          onMouseEnter={() => setHoveredCard(card.season)}
-        >
-          <Image
-            width={248}
-            height={400}
-            src={card.hoverImage}
-            alt={card.season}
-          />
-          <Button disabled={!isHovered(card.season)} isSecondaryButton>
-            {calendarHomeT("BUTTON")}
-          </Button>
+      <Link href={`#${card.linkTo}`}>
+        <div className={styles.calendarCard}>
+          <Image width={265} src={card.hoverImage} alt={card.season} />
+          <Button isSecondaryButton>{calendarHomeT("BUTTON")}</Button>
         </div>
       </Link>
     ),
   }));
 
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <div className={styles.calendarCardsContainer}>
-      {/* {isMobile ? (
+      {isMobile ? (
         <Carousel
           slides={slides}
-          slidesPerView={2}
-          spaceBetween={30}
-          centeredSlides
-          centeredSlidesBounds
-          slideToClickedSlide
-          normalizeSlideIndex={false}
+          slidesPerView={1}
           freeMode
-          width={500}
+          scrollbar={{
+            enabled: false,
+          }}
+          width={265}
+          slidesOffsetBefore={1}
+          slidesOffsetAfter={-120}
         />
       ) : (
         cards.map((card) => (
@@ -112,7 +113,7 @@ const CalendarCards: React.FC<CalendarCardsProps> = ({
             </div>
           </Link>
         ))
-      )} */}
+      )}
     </div>
   );
 };

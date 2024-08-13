@@ -9,7 +9,6 @@ import Button from "@/app/components/Button";
 import Container from "@/app/components/Container";
 import TitleAndSubtitle from "@/app/components/TitleAndSubtitle";
 import { BRAND_NAME, SOCIAL_MEDIA_BRANDS } from "@/app/constants";
-import useIsMobile from "@/app/hooks/useIsMobile";
 import IMAGE_SRC from "@/app/images/contact/Seccion_Contacto_ImgCabalgata.png";
 import PICAFLOR_LOGO from "@/app/images/logos-sponsor/contacto_Logo_ElPicaflor_positivo.svg";
 import FACEBOOK from "@/app/images/logos-sponsor/contacto_Logo_Fb.svg";
@@ -31,7 +30,6 @@ const defaultValues = {
 };
 
 const ContactUser = () => {
-  const isMobile = useIsMobile();
   const t = useTranslations("CONTACT_USER");
   const [formValues, setFormValues] = useState(defaultValues);
   const [error, setError] = useState(false);
@@ -76,10 +74,7 @@ const ContactUser = () => {
   };
 
   return (
-    <Container
-      className={styles.contactUserContainer}
-      noPaddingRight={!isMobile}
-    >
+    <Container className={styles.contactUserContainer} noPaddingRight>
       <div className={styles.contactUserContent}>
         <TitleAndSubtitle title={t("TITLE")} subtitle={t("SUBTITLE")} />
         <form className={styles.formContainer}>
