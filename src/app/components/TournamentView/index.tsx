@@ -1,11 +1,9 @@
 "use client";
 
 import classNames from "classnames";
-import Image, { StaticImageData } from "next/image";
 import React, { useState } from "react";
 
 import Button from "@/app/components/Button";
-import Container from "@/app/components/Container";
 import TitleAndSubtitle from "@/app/components/TitleAndSubtitle";
 import { validateEmail } from "@/app/utils";
 
@@ -16,7 +14,6 @@ interface TournamentViewProps {
   subtitle: string;
   inputPlaceHolder: string;
   buttonLabel: string;
-  imgTournamentSrc: StaticImageData;
   mailFrom: string;
 }
 
@@ -25,7 +22,6 @@ const TournamentView: React.FC<TournamentViewProps> = ({
   subtitle,
   inputPlaceHolder,
   buttonLabel,
-  imgTournamentSrc,
   mailFrom,
 }) => {
   const [email, setEmail] = useState("");
@@ -62,39 +58,27 @@ const TournamentView: React.FC<TournamentViewProps> = ({
   const stylesInput = classNames(styles.input, error && styles.inputError);
 
   return (
-    <div className={styles.containerTournament}>
-      <Container className={styles.containerContent}>
-        <div>
-          <TitleAndSubtitle
-            title={title}
-            subtitle={subtitle}
-            colorAlternative
+    <div className={styles.containerContent}>
+      <div>
+        <TitleAndSubtitle title={title} subtitle={subtitle} colorAlternative />
+        <div className={styles.inputContainer}>
+          <input
+            type="text"
+            name="email"
+            placeholder={inputPlaceHolder}
+            className={stylesInput}
+            value={email}
+            onChange={handleInputChange}
           />
-          <div className={styles.inputContainer}>
-            <input
-              type="text"
-              name="email"
-              placeholder={inputPlaceHolder}
-              className={stylesInput}
-              value={email}
-              onChange={handleInputChange}
-            />
-            <p
-              style={{ visibility: error ? "visible" : "hidden" }}
-              className={styles.error}
-            >
-              {error}
-            </p>
-          </div>
+          <p
+            style={{ visibility: error ? "visible" : "hidden" }}
+            className={styles.error}
+          >
+            {error}
+          </p>
         </div>
-        <Button onClick={handleClick}>{buttonLabel}</Button>
-      </Container>
-      <Image
-        src={imgTournamentSrc}
-        width={1440}
-        alt="Tournament"
-        layout="responsive"
-      />
+      </div>
+      <Button onClick={handleClick}>{buttonLabel}</Button>
     </div>
   );
 };

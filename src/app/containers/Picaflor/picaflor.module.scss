@@ -1,9 +1,10 @@
 @import "../../styles/variables.scss";
+@import "../../styles/devices.scss";
 
 // CAROUSEL PICAFLOR
 
 .carouselPicaflorContainer {
-  padding: 8rem 0;
+  padding: 7rem 0;
 }
 
 .containerContentHeaderCarousel {
@@ -19,5 +20,29 @@
     position: absolute;
     bottom: 4rem;
     left: 2rem;
+  }
+}
+
+.containerTournament {
+  position: relative;
+  background-image: url("../../images/picaflor//Img_Torneos_El_Picaflor.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+@include mobile {
+  .containerTournament {
+    padding: $container-space-around-horizontal-mobile;
+  }
+  .carouselPicaflorContainer {
+    padding: 1rem 0 3rem 0;
+  }
+  .containerImageCarousel {
+    height: 345px;
+  }
+  .containerContentHeaderCarousel {
+    padding: $container-space-around-mobile-2;
   }
 }
