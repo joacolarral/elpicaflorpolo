@@ -99,10 +99,14 @@
     }
   }
 
+  // CARDS HOME
+
+  .calendarHomeContainer {
+    display: block;
+  }
+
   .calendarCardsContainer {
     display: block;
-    overflow: hidden;
-    max-width: 400px;
   }
 
   .cardsContainer {
@@ -117,11 +121,11 @@
 
   .calendarCard {
     transition: none;
-    position: relative;
+    position: static;
     z-index: 0;
     &:hover {
       transform: none;
-      z-index: 1;
+      z-index: 0;
     }
   }
 }
