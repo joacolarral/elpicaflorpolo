@@ -4,8 +4,8 @@
 #wing1,
 #wing2,
 #wing3 {
-  transform-origin: center bottom;
-  animation: flap 0.1s ease-in-out infinite alternate;
+  transform-origin: 50% 50%;
+  animation: flap 0.09s ease-in-out infinite alternate;
 }
 
 #body1,
@@ -38,10 +38,10 @@
 
 @keyframes flap {
   0% {
-    transform: rotate(-4deg);
+    transform: rotate(-15deg);
   }
   100% {
-    transform: rotate(2deg);
+    transform: rotate(0deg);
   }
 }
 @keyframes circularMovement {

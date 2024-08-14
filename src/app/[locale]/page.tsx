@@ -14,11 +14,11 @@ import Picaflor from "../containers/Picaflor";
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsMounted(true);
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsMounted(true);
+  //   }, 2000);
+  // }, []);
 
   if (!isMounted) {
     return <PicaflorLoading />;
