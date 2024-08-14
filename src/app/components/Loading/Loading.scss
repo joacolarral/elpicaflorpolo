@@ -4,8 +4,17 @@
 #wing1,
 #wing2,
 #wing3 {
-  transform-origin: center bottom; /* Ajustá según el diseño del ala */
-  animation: flap 0.5s ease-in-out infinite alternate;
+  transform-origin: center bottom;
+  animation: flap 0.1s ease-in-out infinite alternate;
+}
+
+#body1,
+#body2,
+#body3,
+#body4 {
+  transform-origin: center center;
+  animation: circularMovement 4s ease-in-out 1;
+  animation-fill-mode: forwards;
 }
 
 #picaflor_loading {
@@ -33,6 +42,20 @@
   }
   100% {
     transform: rotate(2deg);
+  }
+}
+@keyframes circularMovement {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  25% {
+    transform: rotate(0deg) translateX(0);
+  }
+  30% {
+    transform: rotate(-40deg) translateX(20px);
+  }
+  100% {
+    transform: rotate(-40deg) translateX(20px);
   }
 }
 
