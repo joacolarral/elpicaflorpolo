@@ -84,16 +84,19 @@
     display: none;
   }
   .carouselTextContainer {
-    left: $space-left-mobile;
-    top: 1rem;
+    padding: $container-space-around-mobile-2;
+    padding-right: 0;
+    top: 0;
+    left: 0;
     max-width: 350px;
   }
+  //  CAROUSEL HOME
 
   // EXPERIENCES HOME
 
   .experiencesCardHomeContainer {
     gap: 2rem;
-    padding: 4rem 0;
+    padding: 2rem 0;
     h2 {
       padding-left: $space-left-mobile;
     }
@@ -127,5 +130,13 @@
       transform: none;
       z-index: 0;
     }
+  }
+}
+
+@include cellphone {
+  .carouselTextContainer {
+    padding-left: 0.5rem;
+    padding-top: 2rem;
+    max-width: 300px;
   }
 }

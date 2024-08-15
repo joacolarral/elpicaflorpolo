@@ -84,12 +84,12 @@
   display: flex;
   gap: 5rem;
   align-items: center;
+}
 
-  > div {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
+.contactUser {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .contactUserSocialMedia {
@@ -179,10 +179,11 @@
 
 @include mobile {
   .contactUserContainer {
-    img {
-      display: none;
-    }
     padding-right: $space-left-mobile;
+  }
+
+  .imagePlace {
+    display: none;
   }
 
   .contactBrandContainerBrands {
@@ -207,6 +208,41 @@
     input {
       width: 100%;
       margin: 1rem 0 3rem 0;
+    }
+  }
+
+  .contactUserLogosContainer {
+    justify-content: center;
+    padding: 2rem 0;
+    gap: 1.5rem;
+  }
+
+  .contactUser {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    > div {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      width: 100px;
+    }
+  }
+
+  .horizontalLine {
+    width: 9rem;
+    height: 1px;
+  }
+
+  .contactUserSocialMedia {
+    flex-direction: row;
+    gap: 1.5rem;
+    img {
+      width: 36px;
     }
   }
 }

@@ -18,3 +18,8 @@
     max-width: 350px;
   }
 }
+@include cellphone {
+  .container {
+    max-width: 300px;
+  }
+}
