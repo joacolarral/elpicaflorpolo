@@ -44,12 +44,7 @@ const createSlides = (t: any, isMobile: boolean): Slide[] => {
     id: index + 2,
     value: (
       <div className={styles.containerImageCarousel}>
-        <Image
-          width={isMobile ? 256 : 1440}
-          layout="responsive"
-          src={image.src}
-          alt={image.alt}
-        />
+        <Image width={isMobile ? 256 : 1440} src={image.src} alt={image.alt} />
       </div>
     ),
   }));

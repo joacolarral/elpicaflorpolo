@@ -17,8 +17,7 @@ const buildSlides = (isMobile: boolean) => {
     value: (
       <Image
         key={index}
-        width={isMobile ? 813 : 1440}
-        layout="responsive"
+        width={isMobile ? 500 : 1440}
         src={image.src}
         alt={image.alt}
       />
