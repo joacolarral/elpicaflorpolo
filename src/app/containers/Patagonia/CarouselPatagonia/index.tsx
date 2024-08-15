@@ -10,6 +10,7 @@ import useIsMobile from "@/app/hooks/useIsMobile";
 import styles from "../patagonia.module.scss";
 
 const imageImports = [
+  "Patagonia_Carrusel0_Cabalgata.png",
   "Patagonia_Carrusel1_Paisaje.png",
   "Patagonia_Carrusel2_Noche.png",
   "Patagonia_Carrusel3_Agua.png",
@@ -17,7 +18,6 @@ const imageImports = [
   "Patagonia_Carrusel5_Evento.png",
   "Patagonia_Carrusel6_Pesca.png",
   "Patagonia_Carrusel7_Arte.png",
-  "Patagonia_Carrusel0_Cabalgata.png",
 ];
 
 const images = imageImports.map((src, index) => ({
