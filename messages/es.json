@@ -12,16 +12,16 @@
       "BIG_TITLE": "POLO EN ARGENTINA"
     },
     "CALENDAR_SECTION": {
-      "TITLE": "UN CAMINO PARA RECORRER",
+      "TITLE": "Un camino para recorrer",
       "SUBTITLE": "Experimentá el Polo durante todo el año en Buenos Aires y en la Patagonia.",
       "BUTTON": "Descubrila"
     },
     "CAROUSEL_HOME": {
-      "TITLE": "LA EXPERIENCIA",
+      "TITLE": "La experiencia",
       "SUBTITLE": "El polo es más que el partido, es una experiencia que combina deporte, naturaleza y encuentro."
     },
     "EXPERIENCES_CARD_HOME": {
-      "TITLE": "TRES PROPUESTAS EXCLUSIVAS",
+      "TITLE": "Tres propuestas exclusivas",
       "CARD_1": {
         "TITLE": "Día de polo",
         "DESCRIPTION": "Día completo de introducción al polo\nTour por el club\n1 práctica de polo\nAsado"
@@ -42,18 +42,18 @@
       "BIG_TITLE": "EL PICAFLOR POLO"
     },
     "MAP_SECTION": {
-      "TITLE": "DÓNDE ESTAMOS",
+      "TITLE": "Dónde estamos",
       "SUBTITLE": "Ubicado en Capilla del Señor, Buenos Aires, Argentina, a una hora de la Capital Federal.",
       "BUTTON_LINK": "Cómo llegar"
     },
     "TOURNAMENT_SECTION": {
-      "TITLE": "TORNEOS",
+      "TITLE": "Torneos",
       "SUBTITLE": "En El Picaflor Polo Club organizamos torneos de dos semanas de Marzo a Diciembre, con equipos de 8 y 12 goles. Ofrecemos caballos, petiseros y equipos. Pedí el calendario de torneos e inscribite.",
       "INPUT_PLACEHOLDER": "Mail de contacto",
       "BUTTON_LABEL": "Enviar"
     },
     "CAROUSEL_PICAFLOR": {
-      "TITLE": "EVENTOS Y ACTIVIDADES",
+      "TITLE": "Eventos y actividades",
       "SUBTITLE": "Diseñamos experiencias únicas que combinan polo con gastronomía, campo, turismo y alojamiento."
     }
   },
@@ -63,18 +63,18 @@
       "BIG_TITLE": "PATAGONIA POLO"
     },
     "MAP_SECTION": {
-      "TITLE": "DÓNDE ESTAMOS",
+      "TITLE": "Dónde estamos",
       "SUBTITLE": "Arelauquen Golf & Country Club, ubicado en Bariloche, Río Negro, Patagonia Argentina, rodeado de naturaleza, parques nacionales, glaciares, ríos, lagos y montañas.",
       "BUTTON_LINK": "Cómo llegar"
     },
     "TOURNAMENT_SECTION": {
-      "TITLE": "TORNEOS",
+      "TITLE": "Torneos",
       "SUBTITLE": "En Patagonia Polo organizamos torneos de una semana en Enero y Febrero, con equipos de 6 a 8 goles. Proveemos caballos, petiseros y equipos. Consultanos disponibilidad y planificá tu visita.",
       "INPUT_PLACEHOLDER": "Mail de contacto",
       "BUTTON_LABEL": "Enviar"
     },
     "CAROUSEL_PATAGONIA": {
-      "TITLE": "EXPERIENCIAS PERSONALIZADAS",
+      "TITLE": "Experiencias personalizadas",
       "SUBTITLE": "Creamos viajes únicos y a medida, combinando polo con gastronomía, senderismo, trekking, kayak, ciclismo, navegación y pesca, entre otros. Contactate y diseñemos juntos tu experiencia en la Patagonia Argentina."
     }
   },
@@ -88,7 +88,7 @@
     }
   },
   "CONTACT_USER": {
-    "TITLE": "CONTACTATE",
+    "TITLE": "Contactate",
     "SUBTITLE": "Llená el formulario y nos pondremos en contacto.",
     "INPUT_FULLNAME": "Nombre y apellido",
     "INPUT_MAIL": "Mail de contacto",
