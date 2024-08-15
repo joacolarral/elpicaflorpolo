@@ -129,7 +129,12 @@ const ContactUser = () => {
           ))}
         </div>
       </div>
-      <Image layout="responsive" src={IMAGE_SRC} alt="contact_form" />
+      <Image
+        className={styles.imagePlace}
+        layout="responsive"
+        src={IMAGE_SRC}
+        alt="contact_form"
+      />
     </Container>
   );
 };

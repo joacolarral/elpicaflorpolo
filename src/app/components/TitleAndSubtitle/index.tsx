@@ -5,7 +5,7 @@ import styles from "./TitleAndSubtitle.module.scss";
 
 interface TitleAndSubtitleProps {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   colorAlternative?: boolean | undefined;
 }
 

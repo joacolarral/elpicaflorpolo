@@ -22,3 +22,9 @@
     padding: $container-space-vertical-left-mobile;
   }
 }
+
+@include cellphone {
+  .container {
+    padding: 2rem 0.5rem;
+  }
+}

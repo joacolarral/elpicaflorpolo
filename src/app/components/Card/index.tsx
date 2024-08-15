@@ -22,11 +22,11 @@ const Card: React.FC<CardProps> = ({ srcImage, alt, title, description }) => {
       aria-label={alt}
     >
       <div className={styles.titleContainer}>
-        <h2>{title}</h2>
+        <h5>{title}</h5>
       </div>
 
       <div className={styles.hoveredContentContainer}>
-        <h2>{title}</h2>
+        <h5>{title}</h5>
         <div className={styles.horizontalLine} />
         <div className={styles.paragraphContainer}>
           {formatDescription(description)}

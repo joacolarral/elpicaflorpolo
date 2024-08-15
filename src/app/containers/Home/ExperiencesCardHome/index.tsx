@@ -7,20 +7,27 @@ import Card from "@/app/components/Card";
 import Carousel from "@/app/components/Carousel";
 import Container from "@/app/components/Container";
 import styles from "@/app/containers/Home/home.module.scss";
+import useDevices from "@/app/hooks/useDevices";
 import useIsMobile from "@/app/hooks/useIsMobile";
 import Card_1 from "@/app/images/home/cards/Home_tarjeta_DiaPolo.png";
 import Card_3 from "@/app/images/home/cards/Home_tarjeta_EventoCorporativo.png";
 import Card_2 from "@/app/images/home/cards/Home_tarjeta_SemanaPolo.png";
+import CardMobile_1 from "@/app/images/home/cards/TarjetaMobile_DiaPolo.png";
+import CardMobile_3 from "@/app/images/home/cards/TarjetaMobile_EventoCorporativo.png";
+import CardMobile_2 from "@/app/images/home/cards/TarjetaMobile_SemanaPolo.png";
+
+interface Slide {
+  id: number;
+  value: React.ReactNode;
+}
 
 const ExperiencesCardHome: React.FC = () => {
   const isMobile = useIsMobile();
+  const { isSmallMobile } = useDevices();
   const experiencesCardHomeT = useTranslations("HOME.EXPERIENCES_CARD_HOME");
-  const cardsExperience = [Card_1, Card_2, Card_3];
-
-  interface Slide {
-    id: number;
-    value: React.ReactNode;
-  }
+  const cardsExperience = isMobile
+    ? [CardMobile_1, CardMobile_2, CardMobile_3]
+    : [Card_1, Card_2, Card_3];
 
   const slides: Slide[] = cardsExperience.map((cardImage, index) => ({
     id: index + 1,
@@ -52,7 +59,7 @@ const ExperiencesCardHome: React.FC = () => {
             scrollbar={{
               enabled: false,
             }}
-            width={385}
+            width={isSmallMobile ? 285 : 360}
             slidesOffsetBefore={12}
           />
         ) : (

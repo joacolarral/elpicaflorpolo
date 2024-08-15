@@ -1,10 +1,9 @@
-// MapView.tsx
-
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 
 import Button from "@/app/components/Button";
 import TitleAndSubtitle from "@/app/components/TitleAndSubtitle";
+import useIsMobile from "@/app/hooks/useIsMobile";
 
 import styles from "./MapView.module.scss";
 
@@ -25,7 +24,21 @@ const MapView: React.FC<MapViewProps> = ({
   buttonLabel,
   imagePlace,
 }) => {
-  return (
+  const isMobile = useIsMobile();
+  return isMobile ? (
+    <div className={styles.containerMapView}>
+      <TitleAndSubtitle title={title} />
+      <div className={styles.imageContainer}>
+        <Image layout="responsive" src={imgMap} alt="MapView" />
+      </div>
+      <p>{subtitle}</p>
+      <div className={styles.containerContentMapView}>
+        <Button redirect={redirectUrl} isSecondaryButton>
+          {buttonLabel}
+        </Button>
+      </div>
+    </div>
+  ) : (
     <div className={styles.containerMapView}>
       <div className={styles.imageContainer}>
         <Image layout="responsive" src={imgMap} alt="MapView" />

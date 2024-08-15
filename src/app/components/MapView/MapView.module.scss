@@ -1,3 +1,6 @@
+@import "../../styles/variables.scss";
+@import "../../styles/devices.scss";
+
 .containerMapView {
   display: flex;
   gap: 3rem;
@@ -15,5 +18,13 @@
   flex: 1;
   img {
     margin-top: 3rem;
+  }
+}
+
+@include mobile {
+  .containerMapView {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
   }
 }
