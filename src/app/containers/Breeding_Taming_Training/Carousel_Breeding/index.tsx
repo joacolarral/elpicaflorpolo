@@ -71,8 +71,8 @@ const CarouselBreedingTamingTraining: React.FC = () => {
         slideToClickedSlide
         normalizeSlideIndex={false}
         width={isMobile ? 1000 : 1150}
-        slidesOffsetBefore={isMobile ? 40 : 80}
-        slidesOffsetAfter={isMobile ? 600 : -200}
+        slidesOffsetBefore={isMobile ? 24 : 80}
+        slidesOffsetAfter={isMobile ? 675 : -200}
         freeMode
         onScroll={(swiper) => activeImgs(swiper)}
       />

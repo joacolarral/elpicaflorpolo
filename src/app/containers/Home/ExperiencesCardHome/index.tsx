@@ -61,6 +61,7 @@ const ExperiencesCardHome: React.FC = () => {
             }}
             width={isSmallMobile ? 285 : 360}
             slidesOffsetBefore={12}
+            slidesOffsetAfter={-50}
           />
         ) : (
           cardsExperience.map((cardImage, index) => (
