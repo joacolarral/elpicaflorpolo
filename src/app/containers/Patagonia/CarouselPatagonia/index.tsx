@@ -44,7 +44,12 @@ const createSlides = (t: any, isMobile: boolean): Slide[] => {
     id: index + 2,
     value: (
       <div className={styles.containerImageCarousel}>
-        <Image src={image.src} alt={image.alt} />
+        <Image
+          width={isMobile ? 256 : 1440}
+          layout="responsive"
+          src={image.src}
+          alt={image.alt}
+        />
       </div>
     ),
   }));
@@ -71,7 +76,7 @@ const CarouselPatagonia: React.FC = () => {
         centeredSlidesBounds
         slideToClickedSlide
         slidesOffsetBefore={isMobile ? 24 : 0}
-        slidesOffsetAfter={isMobile ? 200 : 0}
+        slidesOffsetAfter={isMobile ? 275 : 0}
         normalizeSlideIndex={false}
         freeMode
         width={isMobile ? 600 : 1350}
