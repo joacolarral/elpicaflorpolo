@@ -96,7 +96,7 @@ const CalendarCards: React.FC<CalendarCardsProps> = ({
           }}
           width={265}
           slidesOffsetBefore={1}
-          slidesOffsetAfter={-120}
+          slidesOffsetAfter={-100}
         />
       ) : (
         cards.map((card) => (
