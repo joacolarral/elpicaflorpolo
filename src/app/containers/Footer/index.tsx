@@ -55,7 +55,7 @@ const Footer = () => {
             logos={LOGOS.PICAFLOR}
             email="picaflorpolo@gmail.com"
             mapLink="https://maps.app.goo.gl/EgtodBtFrFGQfgHGA"
-            mapText="Capilla del Señor, Provincia de Buenos Aires, Argentina"
+            mapText="El Picaflor polo, Capilla del Señor, Provincia de Buenos Aires"
           />
         </div>
         <div>
@@ -67,7 +67,7 @@ const Footer = () => {
             logos={LOGOS.PATAGONIA}
             email="patagoniapoloweek@gmail.com"
             mapLink="https://maps.app.goo.gl/KenpUFgPJFhNzQHH9"
-            mapText="Ruta 82 Lago Gutiérrez, R8400 San Carlos de Bariloche, Patagonia Argentina"
+            mapText="Arelauquen Golf & Country Club, Ruta 82 Lago Gutiérrez, R8400 San Carlos de Bariloche, Patagonia Argentina"
           />
         </div>
       </div>
