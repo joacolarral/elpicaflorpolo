@@ -6,19 +6,25 @@ import React, { useState } from "react";
 
 import Button from "@/app/components/Button";
 import Container from "@/app/components/Container";
+import ADBLICK_LOGO from "@/app/images/logos-sponsor/Sponsor_ADBlick.svg";
+import ER_LOGO from "@/app/images/logos-sponsor/Sponsor_ER.svg";
 import ARELAUQUEN_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_Arelauquen.svg";
 import CAVALIER_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_Cavalier.svg";
 import MANIFESTO_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_Manifiesto.svg";
 import PRENSAPOLO_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_PrensaPolo.svg";
 import SIXT_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_Sixt.svg";
+import POLOMADE_LOGO from "@/app/images/logos-sponsor/Sponsor_PoloMade.svg";
 import { validateEmail } from "@/app/utils";
 
 import styles from "../contact.module.scss";
 
 const Logos = [
+  { src: ADBLICK_LOGO, alt: "AD BLICK" },
   { src: ARELAUQUEN_LOGO, alt: "Arelauquen Golf & Country Club" },
   { src: CAVALIER_LOGO, alt: "Cavalier Polo" },
+  { src: ER_LOGO, alt: "Emotional Reminder" },
   { src: MANIFESTO_LOGO, alt: "Manifiesto" },
+  { src: POLOMADE_LOGO, alt: "Polo Made" },
   { src: PRENSAPOLO_LOGO, alt: "Prensa Polo" },
   { src: SIXT_LOGO, alt: "Sixt Rent a Car" },
 ];
