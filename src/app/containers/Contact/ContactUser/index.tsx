@@ -68,7 +68,6 @@ const ContactUser = () => {
     e.preventDefault();
     if (!validateEmail(formValues.email)) {
       setError(true);
-      showError();
     } else {
       try {
         setError(false);
