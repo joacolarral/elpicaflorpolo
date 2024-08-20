@@ -7,6 +7,8 @@ import Button from "@/app/components/Button";
 import TitleAndSubtitle from "@/app/components/TitleAndSubtitle";
 import { validateEmail } from "@/app/utils";
 
+import { useNotification } from "../Notifications";
+
 import styles from "./TournamentView.module.scss";
 
 interface TournamentViewProps {
@@ -24,6 +26,7 @@ const TournamentView: React.FC<TournamentViewProps> = ({
   buttonLabel,
   mailFrom,
 }) => {
+  const { showError, showSuccess } = useNotification();
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
 
@@ -44,14 +47,23 @@ const TournamentView: React.FC<TournamentViewProps> = ({
       }),
     });
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (!validateEmail(email)) {
       setError("Invalid email");
     } else {
-      setEmail("");
-      setError("");
-      sendRegistrationEmail();
+      try {
+        setError("");
+        const response = await sendRegistrationEmail();
+        if (response.ok) {
+          showSuccess();
+          setEmail("");
+        } else {
+          showError();
+        }
+      } catch (error) {
+        showError();
+      }
     }
   };
 

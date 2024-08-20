@@ -6,6 +6,7 @@ import React, { useState } from "react";
 
 import Button from "@/app/components/Button";
 import Container from "@/app/components/Container";
+import { useNotification } from "@/app/components/Notifications";
 import ADBLICK_LOGO from "@/app/images/logos-sponsor/Sponsor_ADBlick.svg";
 import ER_LOGO from "@/app/images/logos-sponsor/Sponsor_ER.svg";
 import ARELAUQUEN_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_Arelauquen.svg";
@@ -31,6 +32,7 @@ const Logos = [
 
 const ContactBrand = () => {
   const t = useTranslations("CONTACT_BRAND");
+  const { showError, showSuccess } = useNotification();
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
 
@@ -51,14 +53,23 @@ const ContactBrand = () => {
       }),
     });
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (!validateEmail(email)) {
       setError("Invalid email");
     } else {
-      setEmail("");
-      setError("");
-      sendRegistrationEmail();
+      try {
+        setError("");
+        const response = await sendRegistrationEmail();
+        if (response.ok) {
+          showSuccess();
+          setEmail("");
+        } else {
+          showError();
+        }
+      } catch (error) {
+        showError();
+      }
     }
   };
 

@@ -1,0 +1,29 @@
+@import "../../styles/variables.scss";
+@import "../../styles/devices.scss";
+
+.notificationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-top: 1.5px solid $secondary_color_light;
+  border-bottom: 1.5px solid $secondary_color_light;
+  padding: 1.5rem 0;
+  width: 14rem;
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  button {
+    max-width: 6rem;
+  }
+}

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import PicaflorLoading from "../components/Loading";
+import { NotificationProvider } from "../components/Notifications";
 import BreedingTamingTraining from "../containers/Breeding_Taming_Training";
 import Contact from "../containers/Contact";
 import Footer from "../containers/Footer";
@@ -25,14 +26,16 @@ export default function Home() {
   }
 
   return (
-    <div>
-      <Navbar />
-      <HomeUI />
-      <Picaflor />
-      <Patagonia />
-      <BreedingTamingTraining />
-      <Contact />
-      <Footer />
-    </div>
+    <NotificationProvider>
+      <div>
+        <Navbar />
+        <HomeUI />
+        <Picaflor />
+        <Patagonia />
+        <BreedingTamingTraining />
+        <Contact />
+        <Footer />
+      </div>
+    </NotificationProvider>
   );
 }

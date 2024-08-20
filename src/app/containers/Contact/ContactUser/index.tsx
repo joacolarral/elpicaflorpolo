@@ -7,6 +7,7 @@ import React, { useState } from "react";
 
 import Button from "@/app/components/Button";
 import Container from "@/app/components/Container";
+import { useNotification } from "@/app/components/Notifications";
 import TitleAndSubtitle from "@/app/components/TitleAndSubtitle";
 import { BRAND_NAME, SOCIAL_MEDIA_BRANDS } from "@/app/constants";
 import IMAGE_SRC from "@/app/images/contact/Seccion_Contacto_ImgCabalgata.png";
@@ -31,6 +32,7 @@ const defaultValues = {
 
 const ContactUser = () => {
   const t = useTranslations("CONTACT_USER");
+  const { showError, showSuccess } = useNotification();
   const [formValues, setFormValues] = useState(defaultValues);
   const [error, setError] = useState(false);
 
@@ -62,14 +64,23 @@ const ContactUser = () => {
       }),
     });
 
-  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (!validateEmail(formValues.email)) {
       setError(true);
     } else {
-      setFormValues(defaultValues);
-      setError(false);
-      sendForm();
+      try {
+        setError(false);
+        const response = await sendForm();
+        if (response.ok) {
+          setFormValues(defaultValues); // Reiniciar los valores del formulario
+          showSuccess();
+        } else {
+          showError();
+        }
+      } catch (error) {
+        showError();
+      }
     }
   };
 
@@ -106,7 +117,6 @@ const ContactUser = () => {
         <Button onClick={handleSubmit} isSecondaryButton>
           {t("BUTTON_LABEL")}
         </Button>
-
         <div className={styles.contactUserLogosContainer}>
           {Object.entries(BRAND_NAME).map(([key]) => (
             <div key={key} className={styles.contactUser}>

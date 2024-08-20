@@ -99,5 +99,10 @@
     "INPUT_LABEL": "Convertite en sponsor",
     "INPUT_MAIL": "Mail de contacto",
     "BUTTON_LABEL": "Enviar"
+  },
+  "NOTIFICATION": {
+    "ERROR": "Hubo un error, por favor intente nuevamente",
+    "SUCCESS": "Mensaje enviado",
+    "BUTTON_LABEL": "Cerrar"
   }
 }
