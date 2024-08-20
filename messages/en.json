@@ -99,5 +99,10 @@
     "INPUT_LABEL": "Partner with us",
     "INPUT_MAIL": "Contact email",
     "BUTTON_LABEL": "Send"
+  },
+  "NOTIFICATION": {
+    "ERROR": "Something went wrong, please try again",
+    "SUCCESS": "Message successfully sent",
+    "BUTTON_LABEL": "Close"
   }
 }
