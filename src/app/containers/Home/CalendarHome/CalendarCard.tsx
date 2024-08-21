@@ -47,9 +47,9 @@ const CalendarSingleCard: React.FC<Props> = ({
         <div className={styles.logoContainer}>
           <card.logo />
         </div>
-        <div className={styles.timeline}>
+        {/* <div className={styles.timeline}>
           <card.timeline />
-        </div>
+        </div> */}
         <p>{card.text}</p>
 
         <Button disabled={!isHovered} isSecondaryButton>
