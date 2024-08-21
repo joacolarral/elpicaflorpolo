@@ -23,21 +23,95 @@
   transition: transform 0.4s ease;
   position: relative;
   z-index: 0;
-  &:hover {
-    transform: scale(1.1);
-    z-index: 1;
+  width: 248px;
+  height: 335px;
+  border: 1px solid $disabled-color;
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  h3 {
+    font-size: 22px;
+    font-weight: 400;
+    color: $disabled-color;
+    height: 32px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    color: $disabled-color;
+    height: 40px;
+    max-width: 12rem;
+    text-align: center;
+    line-height: 20px;
   }
 
   button {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
     width: 140px;
-    &:hover {
-      background-color: white;
-    }
+    height: 43px;
   }
+
+  path,
+  polygon {
+    fill: $disabled-color;
+  }
+}
+
+.timeline {
+  width: 100%;
+}
+
+.cardHovered {
+  border: none;
+
+  h3 {
+    font-weight: 900;
+    font-size: 30px;
+    color: $primary_color_light;
+  }
+
+  p {
+    font-weight: 500;
+    color: $primary_color_light;
+  }
+
+  button {
+    background-color: white !important;
+    font-weight: 700 !important;
+  }
+
+  path,
+  polygon {
+    fill: white;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    z-index: 10;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 105px;
+}
+
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
 }
 
 .pictureContainer {
