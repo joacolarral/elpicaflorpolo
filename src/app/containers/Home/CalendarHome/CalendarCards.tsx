@@ -1,29 +1,29 @@
-"use client";
-
-import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import React, { Dispatch, SetStateAction, useMemo } from "react";
 
-import Button from "@/app/components/Button";
 import Carousel from "@/app/components/Carousel";
+import PatagoniaLogo from "@/app/components/Icons/PatagoniaLogo";
+import PicaflorLogo from "@/app/components/Icons/PicaflorLogo";
+import {
+  TimeLineENAutumn,
+  TimeLineENSpring,
+  TimeLineENSummer,
+} from "@/app/components/Icons/TimeLineEN";
+import {
+  TimeLineESAutumn,
+  TimeLineESSpring,
+  TimeLineESSummer,
+} from "@/app/components/Icons/TimeLineES";
 import { NAVBAR_ITEMS, SEASON } from "@/app/constants";
 import styles from "@/app/containers/Home/home.module.scss";
 import useIsMobile from "@/app/hooks/useIsMobile";
-import Autumn from "@/app/images/home/season_autumn.png";
 import AutumnHover from "@/app/images/home/season_autumn_hover.png";
-import Spring from "@/app/images/home/season_spring.png";
 import SpringHover from "@/app/images/home/season_spring_hover.png";
 import SummerHover from "@/app/images/home/season_summer_hover.png";
-import Summer from "@/app/images/home/season_verano.png";
-import Otoño from "@/app/images/home/Temporada_otoño.png";
-import OtoñoHover from "@/app/images/home/Temporada_otoño_hover.png";
-import Primavera from "@/app/images/home/Temporada_primavera.png";
-import PrimaveraHover from "@/app/images/home/Temporada_primavera_hover.png";
-import Verano from "@/app/images/home/Temporada_verano.png";
-import VeranoHover from "@/app/images/home/Temporada_verano_hover.png";
 import { SeasonType } from "@/app/types";
+
+import CalendarSingleCard from "./CalendarCard";
 
 interface CalendarCardsProps {
   setHoveredCard: Dispatch<SetStateAction<SeasonType>>;
@@ -41,7 +41,7 @@ const CalendarCards: React.FC<CalendarCardsProps> = ({
 }) => {
   const isMobile = useIsMobile();
   const pathname = usePathname();
-  const calendarHomeT = useTranslations("HOME.CALENDAR_SECTION");
+  const t = useTranslations("HOME.CALENDAR_SECTION");
 
   const currentLang = useMemo(() => {
     if (pathname.includes("/es")) return "es";
@@ -51,21 +51,30 @@ const CalendarCards: React.FC<CalendarCardsProps> = ({
 
   const cards = [
     {
-      season: SEASON.AUTUMN,
-      defaultImage: currentLang === "en" ? Autumn : Otoño,
-      hoverImage: currentLang === "en" ? AutumnHover : OtoñoHover,
+      id: SEASON.AUTUMN,
+      season: t("AUTUMN.TITLE"),
+      logo: PicaflorLogo,
+      text: t("AUTUMN.TEXT"),
+      timeline: currentLang === "en" ? TimeLineENAutumn : TimeLineESAutumn,
+      hoverImage: AutumnHover,
       linkTo: NAVBAR_ITEMS.PICAFLOR,
     },
     {
-      season: SEASON.SPRING,
-      defaultImage: currentLang === "en" ? Spring : Primavera,
-      hoverImage: currentLang === "en" ? SpringHover : PrimaveraHover,
+      id: SEASON.SPRING,
+      season: t("SPRING.TITLE"),
+      logo: PicaflorLogo,
+      text: t("SPRING.TEXT"),
+      timeline: currentLang === "en" ? TimeLineENSpring : TimeLineESSpring,
+      hoverImage: SpringHover,
       linkTo: NAVBAR_ITEMS.PICAFLOR,
     },
     {
-      season: SEASON.SUMMER,
-      defaultImage: currentLang === "en" ? Summer : Verano,
-      hoverImage: currentLang === "en" ? SummerHover : VeranoHover,
+      id: SEASON.SUMMER,
+      season: t("SUMMER.TITLE"),
+      logo: PatagoniaLogo,
+      text: t("SUMMER.TEXT"),
+      timeline: currentLang === "en" ? TimeLineENSummer : TimeLineESSummer,
+      hoverImage: SummerHover,
       linkTo: NAVBAR_ITEMS.PATAGONIA,
     },
   ];
@@ -75,12 +84,13 @@ const CalendarCards: React.FC<CalendarCardsProps> = ({
   const slides: Slide[] = cards.map((card, index) => ({
     id: index + 1,
     value: (
-      <Link href={`#${card.linkTo}`}>
-        <div className={styles.calendarCard}>
-          <Image src={card.hoverImage} alt={card.season} />
-          <Button isSecondaryButton>{calendarHomeT("BUTTON")}</Button>
-        </div>
-      </Link>
+      <CalendarSingleCard
+        key={card.id}
+        card={card}
+        setHoveredCard={setHoveredCard}
+        isHovered
+        t={t}
+      />
     ),
   }));
 
@@ -94,31 +104,22 @@ const CalendarCards: React.FC<CalendarCardsProps> = ({
           scrollbar={{
             enabled: false,
           }}
-          width={265}
+          width={253}
           slidesOffsetBefore={1}
-          slidesOffsetAfter={-100}
+          slidesOffsetAfter={-25}
         />
       ) : (
-        cards.map((card) => (
-          <Link key={card.season} href={`#${card.linkTo}`}>
-            <div
-              className={styles.calendarCard}
-              onMouseEnter={() => setHoveredCard(card.season)}
-            >
-              <Image
-                width={248}
-                height={400}
-                src={
-                  isHovered(card.season) ? card.hoverImage : card.defaultImage
-                }
-                alt={card.season}
-              />
-              <Button disabled={!isHovered(card.season)} isSecondaryButton>
-                {calendarHomeT("BUTTON")}
-              </Button>
-            </div>
-          </Link>
-        ))
+        cards.map((card) => {
+          return (
+            <CalendarSingleCard
+              key={card.id}
+              card={card}
+              setHoveredCard={setHoveredCard}
+              isHovered={isHovered(card.id)}
+              t={t}
+            />
+          );
+        })
       )}
     </div>
   );

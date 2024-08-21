@@ -14,6 +14,18 @@
     "CALENDAR_SECTION": {
       "TITLE": "Un camino para recorrer",
       "SUBTITLE": "Experimentá el Polo durante todo el año en Buenos Aires y en la Patagonia.",
+      "AUTUMN": {
+        "TITLE": "OTOÑO",
+        "TEXT": "Temporada de polo en Buenos Aires"
+      },
+      "SPRING": {
+        "TITLE": "PRIMAVERA",
+        "TEXT": "Temporada de polo en Buenos Aires"
+      },
+      "SUMMER": {
+        "TITLE": "VERANO",
+        "TEXT": "Temporada de polo en Patagonia"
+      },
       "BUTTON": "Descubrila"
     },
     "CAROUSEL_HOME": {

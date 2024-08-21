@@ -14,7 +14,19 @@
     "CALENDAR_SECTION": {
       "TITLE": "A path to explore",
       "SUBTITLE": "Experience Polo all year round in both Buenos Aires and Patagonia.",
-      "BUTTON": "Discover it"
+      "AUTUMN": {
+        "TITLE": "AUTUMN",
+        "TEXT": "Polo experience in Buenos Aires"
+      },
+      "SPRING": {
+        "TITLE": "SPRING",
+        "TEXT": "Polo experience in Buenos Aires"
+      },
+      "SUMMER": {
+        "TITLE": "SUMMER",
+        "TEXT": "Polo experience in Patagonia"
+      },
+      "BUTTON": "Descubrila"
     },
     "CAROUSEL_HOME": {
       "TITLE": "The experience",
