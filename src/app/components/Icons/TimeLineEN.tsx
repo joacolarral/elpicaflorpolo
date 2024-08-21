@@ -1,14 +1,10 @@
 export const TimeLineENAutumn = () => (
   <svg
+    width="248"
+    height="400"
     version="1.1"
     id="Layer_1"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
-    x="0px"
-    y="0px"
     viewBox="0 0 248 400"
-    enableBackground="new 0 0 248 400"
-    xmlSpace="preserve"
   >
     <polygon
       className="st0"
@@ -73,15 +69,11 @@ export const TimeLineENAutumn = () => (
 );
 export const TimeLineENSpring = () => (
   <svg
+    width="248"
+    height="400"
     version="1.1"
     id="Layer_1"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
-    x="0px"
-    y="0px"
     viewBox="0 0 248 400"
-    enableBackground="new 0 0 248 400"
-    xmlSpace="preserve"
   >
     <g>
       <g>
@@ -187,15 +179,11 @@ export const TimeLineENSpring = () => (
 );
 export const TimeLineENSummer = () => (
   <svg
+    width="248"
+    height="400"
     version="1.1"
     id="Layer_1"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
-    x="0px"
-    y="0px"
     viewBox="0 0 248 400"
-    enableBackground="new 0 0 248 400"
-    xmlSpace="preserve"
   >
     <g>
       <g>
