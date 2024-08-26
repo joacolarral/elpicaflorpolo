@@ -56,10 +56,7 @@ const ExperiencesCardHome: React.FC = () => {
             slides={slides}
             slidesPerView={1}
             freeMode
-            scrollbar={{
-              enabled: false,
-              hide: true,
-            }}
+            disableScrollbar
             width={isSmallMobile ? 285 : 360}
             slidesOffsetBefore={12}
             slidesOffsetAfter={-30}

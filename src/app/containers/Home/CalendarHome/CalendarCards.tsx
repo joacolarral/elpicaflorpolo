@@ -101,10 +101,7 @@ const CalendarCards: React.FC<CalendarCardsProps> = ({
           slides={slides}
           slidesPerView={1}
           freeMode
-          scrollbar={{
-            enabled: false,
-            hide: true,
-          }}
+          disableScrollbar
           width={253}
           slidesOffsetBefore={1}
           slidesOffsetAfter={-50}
