@@ -28,7 +28,7 @@ export default async function LocaleLayout({
       <Head>
         <title>El Picaflor Polo</title>
         <meta name="description" content="Polo Experience in Argentina" />
-        <link rel="icon" href={favicon.src} type="image/x-icon" />
+        <link rel="icon" href={favicon} type="image/x-icon" />
       </Head>
       <body>
         <NextIntlClientProvider messages={messages}>
