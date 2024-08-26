@@ -2,8 +2,8 @@
 @import "../../styles/devices.scss";
 
 .container {
-  width: 20.5rem;
-  height: 28.5rem;
+  width: 325px;
+  height: 455px;
   position: relative;
   background-size: cover;
   background-position: center;
@@ -85,7 +85,7 @@
 @include mobile {
   .hoveredContentContainer {
     background: rgba(255, 255, 255, 1);
-    top: 21svh;
+    top: 195px;
     padding: 1.5rem 0 2rem;
     gap: 0.5rem;
     opacity: 1;
@@ -93,7 +93,7 @@
   .paragraphContainer {
     gap: 0.5rem;
     flex: 1 0 auto;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 0 2.1rem;
   }
   .container {
