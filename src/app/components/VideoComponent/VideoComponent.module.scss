@@ -17,6 +17,7 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
+  height: 100dvh;
 }
 
 .titleContainer {
@@ -44,6 +45,7 @@
   .container {
     video {
       height: 100vh;
+      height: 100dvh;
       object-fit: cover;
     }
   }
