@@ -22,6 +22,7 @@ interface CustomCarouselProps {
   containerClassname?: string;
   slideClassname?: string;
   scrollbarStylesAlternative?: boolean | undefined;
+  disableScrollbar?: boolean;
 }
 
 // Intersect SwiperProps with CustomCarouselProps
@@ -32,6 +33,7 @@ const Carousel: React.FC<CarouselProps> = ({
   containerClassname,
   slideClassname,
   scrollbarStylesAlternative,
+  disableScrollbar,
   ...rest
 }) => {
   const carouselsContainerStyles = classNames(
@@ -39,11 +41,14 @@ const Carousel: React.FC<CarouselProps> = ({
     containerClassname
   );
   const slideStyle = classNames(styles.swiperSlide, slideClassname);
-  const scrollBarStyles = classNames(
-    scrollbarStylesAlternative
-      ? styles.scrollbarAlternative
-      : styles.scrollBarCustom
-  );
+
+  const scrollBarStyles = classNames({
+    [styles.disableScrollbar]: disableScrollbar,
+    [styles.scrollbarAlternative]:
+      !disableScrollbar && scrollbarStylesAlternative,
+    [styles.scrollBarCustom]: !disableScrollbar && !scrollbarStylesAlternative,
+  });
+
   return (
     <Swiper
       scrollbar={{

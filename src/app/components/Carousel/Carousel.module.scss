@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/devices.scss";
 
 .swiper {
   width: 100%;
@@ -40,4 +41,8 @@
     height: 100%;
     object-fit: cover;
   }
+}
+
+.disableScrollbar {
+  display: none !important;
 }

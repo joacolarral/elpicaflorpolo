@@ -26,7 +26,16 @@ const VideoComponent: React.FC<VideoComponentProps> = ({
         <p>{shortTitle}</p>
         <h1>{bigTitle}</h1>
       </div>
-      {!template && <video src={videoSrc} autoPlay muted loop />}
+      {!template && (
+        <video
+          src={videoSrc}
+          autoPlay
+          muted
+          loop
+          controls
+          onClick={(e) => (e.target as HTMLVideoElement).play()}
+        />
+      )}
     </div>
   );
 };
