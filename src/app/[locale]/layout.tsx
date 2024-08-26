@@ -1,6 +1,9 @@
+import Head from "next/head";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import React from "react";
+
+import favicon from "@/app/favicon.ico";
 
 import type { Metadata } from "next";
 
@@ -18,12 +21,15 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
     <html lang={locale}>
+      <Head>
+        <title>El Picaflor Polo</title>
+        <meta name="description" content="Polo Experience in Argentina" />
+        <link rel="icon" href={favicon.src} type="image/x-icon" />
+      </Head>
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}
