@@ -27,13 +27,14 @@
   color: $primary_color_light;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 6px;
 
   p {
     font-size: 24px;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
   }
   h1 {
-    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
   }
 }
 @include mobile {

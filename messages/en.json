@@ -30,7 +30,7 @@
     },
     "CAROUSEL_HOME": {
       "TITLE": "The experience",
-      "SUBTITLE": "Polo is more than just a game, it is an experience that combines sport, nature and encounter."
+      "SUBTITLE": "Polo is more than just a game, it is an experience that combines sport, nature and gathering."
     },
     "EXPERIENCES_CARD_HOME": {
       "TITLE": "Three exclusive proposals",
@@ -40,7 +40,7 @@
       },
       "CARD_2": {
         "TITLE": "Polo week",
-        "DESCRIPTION": "Weekly learning program with stay\n4 practices\n3 tacking days with theoretical content"
+        "DESCRIPTION": "Weekly learning program with lodging\n4 practices\n3 stick and balling and polo theory days"
       },
       "CARD_3": {
         "TITLE": "Corporate event",
@@ -60,13 +60,13 @@
     },
     "TOURNAMENT_SECTION": {
       "TITLE": "Tournaments",
-      "SUBTITLE": "At El Picaflor Polo Club we organize two-week tournaments from March to December, with teams of 8 and 12 goals. We offer horses, grooms, and teams.",
+      "SUBTITLE": "At El Picaflor Polo Club we organize two-week tournaments from March to December, with teams of 8 and 12 goals. We offer horses, grooms and teams.",
       "INPUT_PLACEHOLDER": "Contact email",
       "BUTTON_LABEL": "Sign up"
     },
     "CAROUSEL_PICAFLOR": {
       "TITLE": "Events and activities",
-      "SUBTITLE": "We design unique experiences that combine polo with gastronomy, countryside, tourism, and lodging."
+      "SUBTITLE": "We design unique experiences that combine polo with gastronomy, countryside lifestyle, tourism and lodging."
     }
   },
   "PATAGONIA": {
