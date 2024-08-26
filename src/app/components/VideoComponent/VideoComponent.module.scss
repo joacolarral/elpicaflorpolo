@@ -40,11 +40,17 @@
   .titleContainer {
     left: $space-left-mobile;
     max-width: 18rem;
+    top: 400px;
   }
   .container {
+    max-height: 900px;
     video {
-      height: 100svh;
+      height: 900px;
       object-fit: cover;
     }
+  }
+
+  .template {
+    height: 900px;
   }
 }
