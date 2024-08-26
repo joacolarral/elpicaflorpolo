@@ -30,10 +30,11 @@ const VideoComponent: React.FC<VideoComponentProps> = ({
         <video
           src={videoSrc}
           autoPlay
-          muted
           loop
-          controls
+          playsInline
+          muted
           onClick={(e) => (e.target as HTMLVideoElement).play()}
+          onTouchStart={(e) => (e.target as HTMLVideoElement).play()}
         />
       )}
     </div>
