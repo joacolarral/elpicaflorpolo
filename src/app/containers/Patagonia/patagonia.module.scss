@@ -48,3 +48,9 @@
     padding: $container-space-around-mobile-2;
   }
 }
+
+@include mobile {
+  .containerTournament {
+    height: 900px;
+  }
+}
