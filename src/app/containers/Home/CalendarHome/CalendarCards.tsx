@@ -103,6 +103,7 @@ const CalendarCards: React.FC<CalendarCardsProps> = ({
           freeMode
           scrollbar={{
             enabled: false,
+            hide: true,
           }}
           width={253}
           slidesOffsetBefore={1}

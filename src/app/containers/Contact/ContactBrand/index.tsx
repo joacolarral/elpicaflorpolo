@@ -11,6 +11,7 @@ import ADBLICK_LOGO from "@/app/images/logos-sponsor/Sponsor_ADBlick.svg";
 import ER_LOGO from "@/app/images/logos-sponsor/Sponsor_ER.svg";
 import ARELAUQUEN_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_Arelauquen.svg";
 import CAVALIER_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_Cavalier.svg";
+import LOGI_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_Logi.svg";
 import MANIFESTO_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_Manifiesto.svg";
 import PRENSAPOLO_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_PrensaPolo.svg";
 import SIXT_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_Sixt.svg";
@@ -22,6 +23,7 @@ import styles from "../contact.module.scss";
 const Logos = [
   { src: ADBLICK_LOGO, alt: "AD BLICK" },
   { src: ARELAUQUEN_LOGO, alt: "Arelauquen Golf & Country Club" },
+  { src: LOGI_LOGO, alt: "Logi" },
   { src: CAVALIER_LOGO, alt: "Cavalier Polo" },
   { src: ER_LOGO, alt: "Emotional Reminder" },
   { src: MANIFESTO_LOGO, alt: "Manifiesto" },
@@ -77,7 +79,7 @@ const ContactBrand = () => {
     <Container className={styles.contactBrandContainer}>
       <div className={styles.contactBrandContainerBrands}>
         {Logos.map((logo, i) => (
-          <div key={i}>
+          <div className={styles.brand} key={i}>
             <Image key={i} src={logo.src} alt={logo.alt} />
           </div>
         ))}

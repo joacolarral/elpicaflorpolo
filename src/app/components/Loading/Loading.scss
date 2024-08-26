@@ -20,14 +20,14 @@
 #picaflor_loading {
   position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   z-index: 9999;
   background-color: $secondary_color_light;
 
   svg {
     position: relative;
     width: 450px;
-    top: 17vh;
+    top: 17dvh;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -62,7 +62,7 @@
 @include mobile {
   #picaflor_loading {
     svg {
-      top: 30vh;
+      top: 30dvh;
       width: 300px;
     }
   }

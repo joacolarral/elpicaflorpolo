@@ -108,7 +108,6 @@
 // CONTACT BRAND
 
 .contactBrandContainer {
-  min-height: 65vh;
   background: url("../../images/contact/Img_fondo_zocalo_PaisajePolo.png");
   background-size: cover;
   background-position: center;
@@ -120,11 +119,18 @@
 
 .contactBrandContainerBrands {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   text-align: center;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
+  padding-bottom: 4rem;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .contactBrandContentContainer {
@@ -201,7 +207,7 @@
   }
 
   .contactBrandContentContainer {
-    padding: 5rem 0 0rem;
+    padding: 1rem 0 0rem;
     input {
       width: 100%;
       margin: 1rem 0 3rem 0;
