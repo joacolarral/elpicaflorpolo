@@ -3,7 +3,7 @@
 
 .container {
   position: relative;
-  max-height: 108dvh;
+  max-height: 108svh;
   overflow: hidden;
 
   video {
@@ -16,13 +16,13 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100dvh;
+  height: 100svh;
 }
 
 .titleContainer {
   position: absolute;
   left: $space-left;
-  top: 42dvh;
+  top: 42svh;
   max-width: 32rem;
   color: $primary_color_light;
   display: flex;
@@ -45,7 +45,7 @@
   }
   .container {
     video {
-      height: 100dvh;
+      height: 100svh;
       object-fit: cover;
     }
   }
