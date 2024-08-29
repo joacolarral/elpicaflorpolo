@@ -3,14 +3,19 @@
 import classNames from "classnames";
 import React from "react";
 // Import Swiper React components
-import { FreeMode, Mousewheel, Scrollbar } from "swiper/modules";
+import { FreeMode, Mousewheel, Scrollbar, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide, SwiperProps } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/scrollbar";
+import 'swiper/css/navigation';
+
+// Import component styles
+import useDevices from "@/app/hooks/useDevices";
 
 import styles from "./Carousel.module.scss";
+import "./Carousel.css";
 
 interface Slide {
   id: number;
@@ -36,6 +41,7 @@ const Carousel: React.FC<CarouselProps> = ({
   disableScrollbar,
   ...rest
 }) => {
+  const {isDesktop} =  useDevices()
   const carouselsContainerStyles = classNames(
     styles.swiper,
     containerClassname
@@ -49,6 +55,7 @@ const Carousel: React.FC<CarouselProps> = ({
     [styles.scrollBarCustom]: !disableScrollbar && !scrollbarStylesAlternative,
   });
 
+  
   return (
     <Swiper
       scrollbar={{
@@ -56,12 +63,13 @@ const Carousel: React.FC<CarouselProps> = ({
         horizontalClass: scrollBarStyles,
         draggable: true,
       }}
+      navigation={isDesktop}
       direction="horizontal"
       mousewheel={{
         forceToAxis: true,
         enabled: true,
       }}
-      modules={[Scrollbar, FreeMode, Mousewheel]}
+      modules={[Scrollbar, FreeMode, Mousewheel, Navigation]}
       className={carouselsContainerStyles}
       {...rest}
     >

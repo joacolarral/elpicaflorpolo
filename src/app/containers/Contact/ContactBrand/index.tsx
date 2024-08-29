@@ -23,9 +23,9 @@ import styles from "../contact.module.scss";
 const Logos = [
   { src: ADBLICK_LOGO, alt: "AD BLICK" },
   { src: ARELAUQUEN_LOGO, alt: "Arelauquen Golf & Country Club" },
-  { src: LOGI_LOGO, alt: "Logi" },
   { src: CAVALIER_LOGO, alt: "Cavalier Polo" },
   { src: ER_LOGO, alt: "Emotional Reminder" },
+  { src: LOGI_LOGO, alt: "Logi" },
   { src: MANIFESTO_LOGO, alt: "Manifiesto" },
   { src: POLOMADE_LOGO, alt: "Polo Made" },
   { src: PRENSAPOLO_LOGO, alt: "Prensa Polo" },
