@@ -39,13 +39,16 @@
     padding: $container-space-around-horizontal-mobile;
   }
   .carouselPatagoniaContainer {
-    padding: 1rem 0 3rem 0;
+    padding: $container-space-vertical-mobile;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
   }
   .containerImageCarousel {
     height: 345px;
   }
   .containerContentHeaderCarousel {
-    padding: $container-space-around-mobile-2;
+    padding-left: $space-left-mobile;
   }
 }
 
