@@ -6,7 +6,7 @@ import React from "react";
 import VideoComponent from "@/app/components/VideoComponent";
 import { NAVBAR_ITEMS } from "@/app/constants";
 import useIsMobile from "@/app/hooks/useIsMobile";
-import MOBILE_VIDEO_CRIA from "@/app/images/videos/celular_cria.mp4";
+import MOBILE_VIDEO_CRIA from "@/app/images/videos/celular_cria.mov";
 import VIDEO_CRIA from "@/app/images/videos/WEB_cria.mov";
 
 import CarouselBreedingTamingTraining from "./Carousel_Breeding";
