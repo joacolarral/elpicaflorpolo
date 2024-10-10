@@ -120,6 +120,10 @@
 .contactBrandContainerBrands {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(
+    4,
+    auto
+  ); /* Puedes ajustar según cuántas filas quieres */
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -130,6 +134,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  /* Centrar el ítem 10 */
+  div:nth-child(10) {
+    grid-column: 2 / 3; /* Ponerlo en la columna del medio */
   }
 }
 

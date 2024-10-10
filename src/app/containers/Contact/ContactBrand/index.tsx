@@ -7,15 +7,16 @@ import React, { useState } from "react";
 import Button from "@/app/components/Button";
 import Container from "@/app/components/Container";
 import { useNotification } from "@/app/components/Notifications";
-import ADBLICK_LOGO from "@/app/images/logos-sponsor/Sponsor_ADBlick.svg";
+import ADBLICK_LOGO from "@/app/images/logos-sponsor/Sponsor_Adblick.svg";
+import ARELAUQUEN_LOGO from "@/app/images/logos-sponsor/Sponsor_Arelauquen.svg";
+import CAVALIER_LOGO from "@/app/images/logos-sponsor/Sponsor_Cavalier.svg";
 import ER_LOGO from "@/app/images/logos-sponsor/Sponsor_ER.svg";
-import ARELAUQUEN_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_Arelauquen.svg";
-import CAVALIER_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_Cavalier.svg";
-import LOGI_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_Logi.svg";
-import MANIFESTO_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_Manifiesto.svg";
-import PRENSAPOLO_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_PrensaPolo.svg";
-import SIXT_LOGO from "@/app/images/logos-sponsor/Sponsor_Logo_Sixt.svg";
-import POLOMADE_LOGO from "@/app/images/logos-sponsor/Sponsor_PoloMade.svg";
+import ICONIC_LOGO from "@/app/images/logos-sponsor/Sponsor_Iconic.svg";
+import LOGI_LOGO from "@/app/images/logos-sponsor/Sponsor_Logipolo.svg";
+import MANIFESTO_LOGO from "@/app/images/logos-sponsor/Sponsor_Manifiesto.svg";
+import POLOMADE_LOGO from "@/app/images/logos-sponsor/Sponsor_Polomade.svg";
+import PRENSAPOLO_LOGO from "@/app/images/logos-sponsor/Sponsor_Prensapolo.svg";
+import SIXT_LOGO from "@/app/images/logos-sponsor/Sponsor_Sixt.svg";
 import { validateEmail } from "@/app/utils";
 
 import styles from "../contact.module.scss";
@@ -25,6 +26,7 @@ const Logos = [
   { src: ARELAUQUEN_LOGO, alt: "Arelauquen Golf & Country Club" },
   { src: CAVALIER_LOGO, alt: "Cavalier Polo" },
   { src: ER_LOGO, alt: "Emotional Reminder" },
+  { src: ICONIC_LOGO, alt: "Iconic" },
   { src: LOGI_LOGO, alt: "Logi" },
   { src: MANIFESTO_LOGO, alt: "Manifiesto" },
   { src: POLOMADE_LOGO, alt: "Polo Made" },
